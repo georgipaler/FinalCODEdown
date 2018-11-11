@@ -2,10 +2,17 @@
     <string name="app_name">Final CODEdown</string>
     <string name="menu">Meniu</string>
 
-    //menu items
+    //menu items profesor
     <string name="profilulMeu">Vezi profil..</string>
     <string name="testeleMele">Testele mele</string>
     <string name="rapoarteStudent">Rapoarte student</string>
     <string name="catalogNote">Catalog note</string>
     <string name="creeazaTest">Creeaza nou test</string>
+
+    //menu items student
+    <string name="intraTest">Intra in test</string>
+    <string name="raport">Raport activitate</string>
+    <string name="setari">Setari limba</string>
+    <string name="deconectare">Deconectare</string>
+    <string name="feedback">Feedback</string>
 </resources>
