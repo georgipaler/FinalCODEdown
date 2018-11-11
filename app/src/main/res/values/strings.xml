@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Final CODEdown</string>
+    <string name="menu">Meniu</string>
+
+    //menu items
+    <string name="profilulMeu">Vezi profil..</string>
+    <string name="testeleMele">Testele mele</string>
+    <string name="rapoarteStudent">Rapoarte student</string>
+    <string name="catalogNote">Catalog note</string>
+    <string name="creeazaTest">Creeaza nou test</string>
 </resources>

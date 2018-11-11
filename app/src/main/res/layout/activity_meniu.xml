@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Meniu"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50px">
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:background="@drawable/img"
+            android:paddingLeft="50px"/>
+
+        <LinearLayout
+            android:id="@+id/infoProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nume Prenume"/>
+
+
+            <Button
+                android:id="@+id/profilulMeu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/profilulMeu"
+                android:textColor="#1B4965"
+                android:background="#fff"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupNumbers"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/testeleMele"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/testeleMele"
+            android:textColor="#1B4965"
+            android:background="#fff"/>
+        <Button
+            android:id="@+id/rapoarte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rapoarteStudent"
+            android:textColor="#1B4965"
+            android:background="#fff"/>
+
+        <Button
+            android:id="@+id/catalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/catalogNote"
+            android:textColor="#1B4965"
+            android:background="#fff"/>
+
+        <Button
+            android:id="@+id/creazaTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/creeazaTest"
+            android:textColor="#1B4965"
+            android:background="#fff"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
