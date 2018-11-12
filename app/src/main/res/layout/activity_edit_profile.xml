@@ -26,16 +26,16 @@
             android:gravity="center"
             android:paddingTop="20px">
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nume"
+                android:hint="@string/nume"
                 android:paddingRight="20px"
                 />
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prenume"/>
+                android:hint="@string/prenume"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -69,7 +69,7 @@
                 android:layout_width="0dip"
                 android:layout_weight=".5"
                 android:layout_height="wrap_content"
-                android:text="@string/username"
+                android:hint="@string/username"
                 android:textSize="20dp"
                 />
 
@@ -97,7 +97,7 @@
                 android:layout_width="0dip"
                 android:layout_weight=".5"
                 android:layout_height="wrap_content"
-                android:text="@string/facultate"
+                android:hint="@string/facultate"
                 android:textSize="20dp"
                 />
 
@@ -125,7 +125,7 @@
                 android:layout_width="0dip"
                 android:layout_weight=".5"
                 android:layout_height="wrap_content"
-                android:text="@string/an"
+                android:hint="@string/an"
                 android:textSize="20dp"
                 />
 
@@ -153,7 +153,7 @@
                 android:layout_width="0dip"
                 android:layout_weight=".5"
                 android:layout_height="wrap_content"
-                android:text="@string/grupa"
+                android:hint="@string/grupa"
                 android:textSize="20dp"
                 />
 
