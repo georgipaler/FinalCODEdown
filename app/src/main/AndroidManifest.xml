@@ -19,7 +19,11 @@
         <!-- <activity android:name=".Meniu"></activity> -->
         <!-- <activity android:name=".MeniuStudent"></activity> -->
         <!-- <activity android:name=".Profile"></activity> -->
-        <!--<activity android:name=".EditProfile"></activity>-->
+        <!-- <activity android:name=".EditProfile"></activity> -->
+        <activity android:name=".MainActivity_Feedback" />
+        <activity android:name=".MainActivity_raspuns_liber" />
+        <activity android:name=".MainActivity_raspuns_multiplu" />
+        <activity android:name=".MainActivity_raspuns_true_false"></activity>
     </application>
 
 </manifest>
