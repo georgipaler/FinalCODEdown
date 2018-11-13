@@ -15,14 +15,4 @@
     <string name="setari">Setari limba</string>
     <string name="deconectare">Deconectare</string>
     <string name="feedback">Feedback</string>
-
-    //profile
-    <string name="nume">Nume</string>
-    <string name="prenume">Prenume</string>
-    <string name="username">Username</string>
-    <string name="facultate">Facultate</string>
-    <string name="an">Anul </string>
-    <string name="grupa">Grupa</string>
-    <string name="edit">Editeaza profil</string>
-
 </resources>
