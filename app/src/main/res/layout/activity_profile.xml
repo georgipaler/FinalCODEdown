@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfile"
+    tools:context=".Profile"
     android:orientation="vertical">
 
 
@@ -31,13 +31,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nume"
                 android:paddingRight="20px"
-                android:textSize="20dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prenume"
-                android:textSize="20dp"/>
+                android:text="@string/prenume"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -45,123 +43,92 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingTop="150px"
+        android:weightSum="1.0"
 
         >
 
         <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:orientation="horizontal"
-            android:weightSum="1.0"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:paddingLeft="150px"
             >
-
-            <TextView
-                android:id="@+id/usernameTV"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="@string/username"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/username"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/username"
                 android:textSize="20dp"
                 />
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
-
-            <TextView
-                android:id="@+id/facultateTV"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="@string/facultate"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/facultate"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/facultate"
                 android:textSize="20dp"
                 />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
-
-            <TextView
-                android:id="@+id/anTV"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="@string/an"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/an"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/an"
                 android:textSize="20dp"
                 />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
-
-            <TextView
-                android:id="@+id/grupaTV"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="@string/grupa"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/grupa"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/grupa"
                 android:textSize="20dp"
                 />
-
-
         </LinearLayout>
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usernameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/facultateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facultate"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/anTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/an"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/grupaTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grupa"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
