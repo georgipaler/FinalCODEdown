@@ -11,17 +11,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:text="@string/creaza_test_nou"
+        android:textColor="#26C4EC"
         android:textSize="32dp"
-        android:textStyle="bold"
-        android:textColor="#26C4EC"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/numeTxt"
         android:layout_width="200dp"
-        android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_below="@+id/testNouTxt"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:hint="@string/nume" />
 
     <EditText
@@ -32,8 +32,8 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="12dp"
-        android:gravity="center"
         android:drawableLeft="@drawable/ic_question"
+        android:gravity="center"
         android:hint="@string/intrebare_noua" />
 
     <LinearLayout
@@ -48,8 +48,8 @@
             android:id="@+id/grilaBtn"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="@string/raspuns_multiplu"
-            android:background="@drawable/background_gri"/>
+            android:background="@drawable/background_gri"
+            android:text="@string/raspuns_multiplu" />
 
         <Button
             android:id="@+id/adevaratFalsBtn"
@@ -64,8 +64,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/raspuns_scurt"
-            android:background="@drawable/background_gri"/>
+            android:background="@drawable/background_gri"
+            android:text="@string/raspuns_scurt" />
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -85,10 +85,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="@string/salveaza_test"
-        android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/background_albastru"/>
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_albastru"
+        android:text="@string/salveaza_test" />
 
 
 </RelativeLayout>

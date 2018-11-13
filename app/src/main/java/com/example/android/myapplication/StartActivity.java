@@ -8,6 +8,6 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adevarat_fals);
+        setContentView(R.layout.activity_intrebare_raspuns_multiplu);
     }
 }
