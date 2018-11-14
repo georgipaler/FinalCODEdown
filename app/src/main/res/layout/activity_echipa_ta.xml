@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/echipaTaTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/echipa_ta"
+        android:textColor="#26C4EC"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numeEchipaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/echipaTaTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/nume_final"
+        android:textColor="#F4ACB7"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/membru1Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numeEchipaTxt"
+        android:layout_marginLeft="36dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:textSize="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/pahon_flavia_emanuela" />
+
+    <TextView
+        android:id="@+id/membru2Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membru1Txt"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:textSize="16dp"
+        android:text="@string/pana_madalina" />
+
+    <TextView
+        android:id="@+id/membru3Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membru2Txt"
+        android:layout_marginLeft="36dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:textSize="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/paler_georgiana" />
+
+    <TextView
+        android:id="@+id/membru4Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membru3Txt"
+        android:layout_marginLeft="36dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:textSize="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/paulas_corina_maria" />
+
+    <TextView
+        android:id="@+id/membru5Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membru4Txt"
+        android:layout_marginLeft="36dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:textSize="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/petcu_otilia_luciana" />
+
+    <TextClock
+        android:id="@+id/timerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membru5Txt"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="40dp"
+        android:text="00:10" />
+
+</RelativeLayout>

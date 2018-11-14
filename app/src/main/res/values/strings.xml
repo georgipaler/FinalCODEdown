@@ -1,28 +1,152 @@
 <resources>
     <string name="app_name">Final CODEdown</string>
-    <string name="menu">Meniu</string>
-
-    //menu items profesor
-    <string name="profilulMeu">Vezi profil..</string>
-    <string name="testeleMele">Testele mele</string>
-    <string name="rapoarteStudent">Rapoarte student</string>
-    <string name="catalogNote">Catalog note</string>
-    <string name="creeazaTest">Creeaza nou test</string>
-
-    //menu items student
-    <string name="intraTest">Intra in test</string>
-    <string name="raport">Raport activitate</string>
-    <string name="setari">Setari limba</string>
-    <string name="deconectare">Deconectare</string>
-    <string name="feedback">Feedback</string>
-
-    //profile
+    <string name="adauga_intrebare_noua">Adauga intrebare noua</string>
+    <string name="intrebare_noua">Intrebare noua</string>
+    <string name="adevarat">Adevarat</string>
+    <string name="fals">Fals</string>
+    <string name="urmatoarea_intrebare">Urmatoarea intrebare</string>
+    <string name="creaza_test_nou">Creaza test nou</string>
     <string name="nume">Nume</string>
-    <string name="prenume">Prenume</string>
+    <string name="raspuns_multiplu">Raspuns multiplu</string>
+    <string name="adevarat_fals">Adevarat/Fals</string>
+    <string name="raspuns_scurt">Raspuns scurt</string>
+    <string name="salveaza_test">Salveaza test</string>
     <string name="username">Username</string>
-    <string name="facultate">Facultate</string>
-    <string name="an">Anul </string>
-    <string name="grupa">Grupa</string>
-    <string name="edit">Editeaza profil</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="student">STUDENT</string>
+    <string name="raport_activitate">Raport activitate</string>
+    <string name="ultimult_test">Ultimult test:</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="raport_general">Raport general</string>
+    <string name="alege_raspunsul">Alege Raspunsul:</string>
+    <string name="corect">Corect?</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="remember_me">Remember me</string>
+    <string name="profesor">PROFESOR</string>
+    <string name="raspuns">Raspuns</string>
+
+    <string-array name="alege_limba">
+        <item>Romana</item>
+        <item>English</item>
+    </string-array>
+
+
+    <string name="ETFeedback">In opinia mea...</string>
+    <string name="RGFeedback">RGFeedback</string>
+    <string name="ETIntrebare_Liber" />
+    <string name="ET_Raspuns_liber" />
+
+    <string name="BTN_Salveaza">SALVEAZA</string>
+    <string name="ET_Intrebare_Multiplu"> Intrebare</string>
+    <string name="ET_Intrebare_true_false"> Intrebare</string>
+    <string name="feedback_test">CUM A FOST TESTUL?</string>
+    <string name="transmitere_opinie">Doresti sa ne transmiti ceva?</string>
+    <string name="intrebarea_x">INTREBAREA X</string>
+    <string name="alege_raspuns">Alege unul sau mai multe raspunsuri:</string>
+    <string name="alege_o_singura_varianta_de_raspuns">Alege o singura varianta de raspuns</string>
+    <string name="raspuns_liber">Raspuns liber</string>
+
+
+
+    <string name="raport_test">Raport test</string>
+    <string name="grupa">Grupa:</string>
+    <string name="data">Data</string>
+    <string name="ora">Ora :</string>
+    <string name="punctaje">Punctaje :</string>
+    <string name="testele_mele">Testele mele</string>
+    <string name="cauta">cauta</string>
+    <string name="test_poo_a">Test POO A</string>
+    <string name="test_poo_b">Test POO B</string>
+    <string name="test_poo_c">Test POO C</string>
+    <string name="test_sdd_a">Test SDD A</string>
+    <string name="test_sdd_b">Test SDD B</string>
+    <string name="test_sdd_c">Test SDD C</string>
+    <string name="test_dam_a">Test DAM A</string>
+    <string name="test_dam_b">Test DAM B</string>
+    <string name="test_dam_c">Test DAM C</string>
+    <string name="echipa_ta">Echipa ta</string>
+    <string name="nume_final">Final CODEdown</string>
+    <string name="pahon_flavia_emanuela">Pahon Flavia Emanuela</string>
+    <string name="pana_madalina">Pana Madalina</string>
+    <string name="paler_georgiana">Paler Georgiana</string>
+    <string name="paulas_corina_maria">Paulas Corina Maria</string>
+    <string name="petcu_otilia_luciana">Petcu Otilia Luciana</string>
+    <string name="_05_00">05:00</string>
+    <string name="uranus">Uranus</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="marte">Marte</string>
+    <string name="alege_echipa">Alege Echipa</string>
+    <string name="saturn">Saturn</string>
+    <string name="catalog_studenti">Catalog studenti</string>
+
+
+        <string name="materii">Materii</string>
+
+        <string name="echipa_marte">ECHIPA MARTE</string>
+        <string name="testul_1">TESTUL 1</string>
+        <string name="incepe_testul">Incepe testul</string>
+        <string name="editeaza_testul">Editeaza testul</string>
+        <string name="no_records">No records</string>
+        <string name="programare_orientat_obiect">Programare orientata obiect</string>
+        <string name="structuri_de_date">Structuri de date</string>
+        <string name="java">Java</string>
+        <string name="android">Android</string>
+        <string name="net">.NET</string>
+        <string name="selec_ia_ta">Selectia ta:</string>
+        <string name="afi_eaz_raport">AFISEAZA RAPORT</string>
+        <string name="editeaz_testul">Editeaza testul</string>
+        <string name="intrebarea_1">Intrebarea 1</string>
+        <string name="raspunsuri1">Raspunsuri</string>
+        <string name="intrebarea_2">Intrebarea 2</string>
+        <string name="raspunsuri">Raspunsuri</string>
+        <string name="adauga_intrebare">Adauga intrebare</string>
+        <string name="salveaza">Salveaza</string>
+        <string name="editeaza1">Editeaza</string>
+        <string name="sterge1">Sterge</string>
+        <string name="editeaza">Editeaza</string>
+        <string name="sterge">Sterge</string>
+    <string name="Pamant">pamant</string>
+
+
+
+
+
+        <string name="menu">Meniu</string>
+
+        //menu items profesor
+        <string name="profilulMeu">Vezi profil..</string>
+        <string name="testeleMele">Testele mele</string>
+        <string name="rapoarteStudent">Rapoarte student</string>
+        <string name="catalogNote">Catalog note</string>
+        <string name="creeazaTest">Creeaza nou test</string>
+
+        //menu items student
+        <string name="intraTest">Intra in test</string>
+        <string name="raport">Raport activitate</string>
+        <string name="setari">Setari limba</string>
+        <string name="deconectare">Deconectare</string>
+        <string name="feedback">Feedback</string>
+
+        //profile
+
+        <string name="prenume">Prenume</string>
+        <string name="facultate">Facultate</string>
+        <string name="an">Anul </string>
+        <string name="edit">Editeaza profil</string>
 
 </resources>
+
+

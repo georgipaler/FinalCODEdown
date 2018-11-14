@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/intrebareTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="@string/intrebarea_x"
+            android:textColor="#26C4EC"
+            android:textSize="32dp" />
+
+        <EditText
+            android:id="@+id/intrebareED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/ic_question"
+            android:gravity="center"
+            android:hint="@string/ET_Intrebare_Multiplu" />
+
+        <TextView
+            android:id="@+id/raspunsuriTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intrebareED"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/alege_raspuns" />
+
+        <CheckBox
+            android:id="@+id/raspunsACB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsuriTxt"
+            android:layout_marginTop="24dp"
+            android:text="@string/a" />
+
+        <EditText
+            android:id="@+id/raspunsAED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsuriTxt"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/raspunsACB"
+            android:hint="Raspuns A" />
+
+        <CheckBox
+            android:id="@+id/raspunsBCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsACB"
+            android:layout_marginTop="12dp"
+            android:text="@string/b" />
+
+        <EditText
+            android:id="@+id/raspunsBED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsAED"
+            android:layout_toEndOf="@+id/raspunsBCB"
+            android:hint="Raspuns B" />
+
+        <CheckBox
+            android:id="@+id/raspunsCCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsBCB"
+            android:layout_marginTop="12dp"
+            android:text="@string/c" />
+
+        <EditText
+            android:id="@+id/raspunsCED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsBED"
+            android:layout_toEndOf="@+id/raspunsCCB"
+            android:hint="Raspuns C" />
+
+        <CheckBox
+            android:id="@+id/raspunsDCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsCCB"
+            android:layout_marginTop="12dp"
+            android:text="@string/d" />
+
+        <EditText
+            android:id="@+id/raspunsDED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raspunsCED"
+            android:layout_toEndOf="@+id/raspunsDCB"
+            android:hint="Raspuns D" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_albastru"
+            android:text="@string/BTN_Salveaza" />
+    </RelativeLayout>
+
+</RelativeLayout>

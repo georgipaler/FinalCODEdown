@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfile"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".StartActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,18 +25,16 @@
             android:gravity="center"
             android:paddingTop="20px">
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nume"
-                android:paddingRight="20px"
-                android:textSize="20dp"
-                />
-            <TextView
+                android:hint="@string/nume"
+                android:paddingRight="20px" />
+
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prenume"
-                android:textSize="20dp"/>
+                android:hint="@string/prenume" />
         </LinearLayout>
 
     </LinearLayout>
@@ -46,137 +43,114 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingLeft="100px"
         android:paddingTop="150px"
+        android:paddingRight="100px"
 
         >
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
+            android:weightSum="1.0">
 
             <TextView
                 android:id="@+id/usernameTV"
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="@string/username"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
-                android:layout_height="wrap_content"
                 android:text="@string/username"
                 android:textSize="20dp"
-                />
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/usernameET"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/username"
+                android:textSize="20dp" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
+            android:weightSum="1.0">
 
             <TextView
                 android:id="@+id/facultateTV"
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="@string/facultate"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/facultate"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
-                android:layout_height="wrap_content"
                 android:text="@string/facultate"
                 android:textSize="20dp"
-                />
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/facultateET"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/facultate"
+                android:textSize="20dp" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
+            android:weightSum="1.0">
 
             <TextView
                 android:id="@+id/anTV"
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="@string/an"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/an"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
-                android:layout_height="wrap_content"
                 android:text="@string/an"
                 android:textSize="20dp"
-                />
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/anET"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/an"
+                android:textSize="20dp" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1.0"
-            android:paddingLeft="150px"
-            >
+            android:weightSum="1.0">
 
             <TextView
                 android:id="@+id/grupaTV"
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="@string/grupa"
-                android:layout_width="0dip"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/grupa"
-                android:layout_width="0dip"
-                android:layout_weight=".5"
-                android:layout_height="wrap_content"
                 android:text="@string/grupa"
                 android:textSize="20dp"
-                />
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/grupaET"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/grupa"
+                android:textSize="20dp" />
 
 
         </LinearLayout>
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit"
-            android:textColor="#1B4965"
-            android:background="#fff"
-            android:layout_gravity="center"/>
     </LinearLayout>
-
 </LinearLayout>

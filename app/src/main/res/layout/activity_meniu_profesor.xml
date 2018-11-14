@@ -4,89 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical"
-    tools:context=".Meniu"
-    android:background="#fff">
+    tools:context=".StartActivity">
 
     <LinearLayout
         android:id="@+id/profile"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
         android:paddingTop="50px">
+
         <ImageView
             android:layout_width="200px"
             android:layout_height="200px"
             android:background="@drawable/img"
-            android:paddingLeft="50px"/>
+            android:paddingLeft="50px" />
 
         <LinearLayout
             android:id="@+id/infoProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/infoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Nume Prenume"/>
-
+                android:text="Nume Prenume"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/profilulMeu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#fff"
                 android:gravity="center"
                 android:text="@string/profilulMeu"
-                android:textColor="#1B4965"
-                android:background="#fff"/>
+                android:textColor="#26c4ec" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/groupNumbers"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_weight="0.7"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
 
         <Button
             android:id="@+id/testeleMele"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/testeleMele"
-            android:textColor="#1B4965"
-            android:background="#fff"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_gri"
+            android:text="@string/testeleMele" />
+
         <Button
             android:id="@+id/rapoarte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rapoarteStudent"
-            android:textColor="#1B4965"
-            android:background="#fff"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_gri"
+            android:text="@string/rapoarteStudent" />
 
         <Button
             android:id="@+id/catalog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/catalogNote"
-            android:textColor="#1B4965"
-            android:background="#fff"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_gri"
+            android:text="@string/catalogNote" />
 
         <Button
             android:id="@+id/creazaTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/creeazaTest"
-            android:textColor="#1B4965"
-            android:background="#fff"/>
-
+            android:background="@drawable/background_gri"
+            android:text="@string/creeazaTest" />
 
 
     </LinearLayout>
