@@ -25,14 +25,4 @@
     <string name="grupa">Grupa</string>
     <string name="edit">Editeaza profil</string>
 
-    <string name="ETFeedback">In opinia mea...</string>
-    <string name="RGFeedback">RGFeedback</string>
-    <string name="ETIntrebare_Liber" />
-    <string name="ET_Raspuns_liber" />
-
-    <string name="BTN_Salveaza">SALVEAZA</string>
-    <string name="ET_Intrebare_Multiplu" />
-    <string name="ET_Intrebare_true_false" />
-
-
 </resources>
