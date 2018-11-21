@@ -60,7 +60,6 @@
     <string name="raspuns_liber">Raspuns liber</string>
 
 
-
     <string name="raport_test">Raport test</string>
     <string name="grupa">Grupa:</string>
     <string name="data">Data</string>
@@ -93,59 +92,56 @@
     <string name="catalog_studenti">Catalog studenti</string>
 
 
-        <string name="materii">Materii</string>
+    <string name="materii">Materii</string>
 
-        <string name="echipa_marte">ECHIPA MARTE</string>
-        <string name="testul_1">TESTUL 1</string>
-        <string name="incepe_testul">Incepe testul</string>
-        <string name="editeaza_testul">Editeaza testul</string>
-        <string name="no_records">No records</string>
-        <string name="programare_orientat_obiect">Programare orientata obiect</string>
-        <string name="structuri_de_date">Structuri de date</string>
-        <string name="java">Java</string>
-        <string name="android">Android</string>
-        <string name="net">.NET</string>
-        <string name="selec_ia_ta">Selectia ta:</string>
-        <string name="afi_eaz_raport">AFISEAZA RAPORT</string>
-        <string name="editeaz_testul">Editeaza testul</string>
-        <string name="intrebarea_1">Intrebarea 1</string>
-        <string name="raspunsuri1">Raspunsuri</string>
-        <string name="intrebarea_2">Intrebarea 2</string>
-        <string name="raspunsuri">Raspunsuri</string>
-        <string name="adauga_intrebare">Adauga intrebare</string>
-        <string name="salveaza">Salveaza</string>
-        <string name="editeaza1">Editeaza</string>
-        <string name="sterge1">Sterge</string>
-        <string name="editeaza">Editeaza</string>
-        <string name="sterge">Sterge</string>
+    <string name="echipa_marte">ECHIPA MARTE</string>
+    <string name="testul_1">TESTUL 1</string>
+    <string name="incepe_testul">Incepe testul</string>
+    <string name="editeaza_testul">Editeaza testul</string>
+    <string name="no_records">No records</string>
+    <string name="programare_orientat_obiect">Programare orientata obiect</string>
+    <string name="structuri_de_date">Structuri de date</string>
+    <string name="java">Java</string>
+    <string name="android">Android</string>
+    <string name="net">.NET</string>
+    <string name="selec_ia_ta">Selectia ta:</string>
+    <string name="afi_eaz_raport">AFISEAZA RAPORT</string>
+    <string name="editeaz_testul">Editeaza testul</string>
+    <string name="intrebarea_1">Intrebarea 1</string>
+    <string name="raspunsuri1">Raspunsuri</string>
+    <string name="intrebarea_2">Intrebarea 2</string>
+    <string name="raspunsuri">Raspunsuri</string>
+    <string name="adauga_intrebare">Adauga intrebare</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="editeaza1">Editeaza</string>
+    <string name="sterge1">Sterge</string>
+    <string name="editeaza">Editeaza</string>
+    <string name="sterge">Sterge</string>
     <string name="Pamant">pamant</string>
 
 
+    <string name="menu">Meniu</string>
 
+    //menu items profesor
+    <string name="profilulMeu">Vezi profil..</string>
+    <string name="testeleMele">Testele mele</string>
+    <string name="rapoarteStudent">Rapoarte student</string>
+    <string name="catalogNote">Catalog note</string>
+    <string name="creeazaTest">Creeaza nou test</string>
 
+    //menu items student
+    <string name="intraTest">Intra in test</string>
+    <string name="raport">Raport activitate</string>
+    <string name="setari">Setari limba</string>
+    <string name="deconectare">Deconectare</string>
+    <string name="feedback">Feedback</string>
 
-        <string name="menu">Meniu</string>
+    //profile
 
-        //menu items profesor
-        <string name="profilulMeu">Vezi profil..</string>
-        <string name="testeleMele">Testele mele</string>
-        <string name="rapoarteStudent">Rapoarte student</string>
-        <string name="catalogNote">Catalog note</string>
-        <string name="creeazaTest">Creeaza nou test</string>
-
-        //menu items student
-        <string name="intraTest">Intra in test</string>
-        <string name="raport">Raport activitate</string>
-        <string name="setari">Setari limba</string>
-        <string name="deconectare">Deconectare</string>
-        <string name="feedback">Feedback</string>
-
-        //profile
-
-        <string name="prenume">Prenume</string>
-        <string name="facultate">Facultate</string>
-        <string name="an">Anul </string>
-        <string name="edit">Editeaza profil</string>
+    <string name="prenume">Prenume</string>
+    <string name="facultate">Facultate</string>
+    <string name="an">Anul </string>
+    <string name="edit">Editeaza profil</string>
 
 </resources>
 
