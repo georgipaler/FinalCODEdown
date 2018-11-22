@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listaTeste">
+        <item>Testul 1</item>
+        <item>Testul 2</item>
+        <item>Testul 3</item>
+        <item>Testul 4</item>
+        <item>Testul 5</item>
+
+    </string-array>
+</resources>
