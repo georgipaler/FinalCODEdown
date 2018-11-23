@@ -1,3 +1,14 @@
+
+/*
+colors: #33658A; -albastru inchis
+        #EF767A   - roz
+        #FCF7FF   -deschis
+*/
+
+div#container-header.container{
+    margin:0 !important;
+    padding:0 !important;
+}   
 .container {
     height: 100%;
     width: 100%;
@@ -9,7 +20,7 @@
         padding: 1rem 3rem 1rem 3rem;
         display: flex;
         justify-content: space-between;
-        background-color: #165787;
+        background-color: #33658A;
         position: relative;}
         .logoWrapper {
             display: flex;
@@ -32,39 +43,16 @@
                 background-color: transparent;
                 color: white;
                 border:0;
+                width: 4rem;
+                height: 4rem;
             }
             #headerLogoutButton:hover{
-                background-color:#1a6397 ;
+                background-color:#33658A ;
                 border-radius: 1rem;
             }
+
+
     
-    .secondHeader {
-        padding: 1rem 2rem 1rem 2rem;
-        background-color: #FFF;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-    }
-        
-        .headerTextWrapper {
-            color: black;
-            flex-direction: column;
-            display: flex;
-        }
-            .greeting {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-                span {
-                    color: blue;
-                    margin: 0;
-                }
-            
-            p {
-                color: gray;
-                font-size: 1rem;
-            }
         
     .sidenav {
         flex-grow: 1;
