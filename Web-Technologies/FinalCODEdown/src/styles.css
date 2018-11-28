@@ -6,7 +6,9 @@ body{
     width: 100%;
     display: block;
     overflow: hidden;
+}
 
-    margin:0;
-    padding: 0;
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
