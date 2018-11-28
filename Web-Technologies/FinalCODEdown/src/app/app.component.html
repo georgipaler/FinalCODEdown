@@ -1,31 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+<div id="container-header" class="container-global">
+    <div id="headerComponent" class="header">
+        <div id="logoWrapper" class="logoWrapper">
+            <a id="logoLink" class="logo" href="/index.html">
+                <img id="logoImg" src="../assets/logo.png" alt="logo" />
+            </a>
         </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <div id="headerButtonsWrapper" class="dropdown buttons">
+            <div id="headerLogoutButton  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../assets/user.png"
+                alt="logo" >MP</div>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Profil</a>
+                <a class="dropdown-item" href="#">Logout</a>
+            </div>
+        </div>
 
-<router-outlet></router-outlet>
+    </div>
+
+    <div class="main-container">
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#testeProf">Testele mele</a>
+            <a class="nav-link" href="#catalog">Catalog</a>
+            <a class="nav-link" href="#rapoarteProf">Rapoarte studenti</a>
+            <a class="nav-link" href="#creeazaTest">Creeaza test</a>
+            <div class="nav-link">
+                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Setari limba
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Romana</a>
+                    <a class="dropdown-item" href="#">Engleza</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="actual-content">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,112 @@
+
+/*
+colors: #208AAE; -albastru inchis
+        #EDA4BD   - roz
+        #F7F4F3   -deschis
+        #6E8898   -gri-text
+*/
+
+.container-global{
+    margin:0 !important;
+    padding:0 !important;
+}   
+.container-global {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+ .header {
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #208AAE;
+    position: relative;}
+
+ .logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+        
+#logoImg {
+    padding: 0 3rem 0 3rem;
+    width: 10rem;
+    height: 4rem;
+    }
+.buttons {
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #F7F4F3;
+    color: #EDA4BD;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+ div#headerLogoutButton {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border:0;
+ }
+
+ #headerLogoutButton:hover{
+    background-color:#208AAE ;
+    border-radius: 1rem;
+ 
+    }
+
+
+.main-container{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+}
+nav.nav{
+    
+    background: #F7F4F3;
+
+    padding: 2rem 3rem 2rem 1.5rem;
+    border-right: solid .1px #6E8898
+}
+
+.actual-content{
+    background: #F7F4F3;
+    flex-grow: 1;
+}
+
+a.nav-link{
+    color:#6E8898;
+}
+.nav-link:focus, .nav-link:hover,
+ button#dropdownMenuButton:focus,
+ button#dropdownMenuButton:focus:hover
+ {
+    color:#EDA4BD;
+}
+
+button#dropdownMenuButton{
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color:#6E8898;
+    border: none;
+    padding: 0;
+}
+
+.dropdown-menu.show{
+    border-radius: .5rem;
+    background-color: #F7F4F3;
+}
+.dropdown-item{
+    color:#6E8898;
+}
