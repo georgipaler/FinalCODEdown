@@ -18,10 +18,10 @@
 
     <div class="main-container">
         <nav class="nav flex-column">
-            <a class="nav-link" href="#testeProf">Testele mele</a>
-            <a class="nav-link" href="#catalog">Catalog</a>
-            <a class="nav-link" href="#rapoarteProf">Rapoarte studenti</a>
-            <a class="nav-link" href="#creeazaTest">Creeaza test</a>
+            <a class="nav-link" [routerLink]="[{ outlets: {sidebar: ['testeProf'] } }]">Testele mele</a>
+            <a class="nav-link" [routerLink]="[{ outlets: {sidebar: ['catalog'] } }]">Catalog</a>
+            <a class="nav-link" [routerLink]="[{ outlets: {sidebar: ['rapoarteProf'] } }]">Rapoarte studenti</a>
+            <a class="nav-link"  [routerLink]="[{ outlets: {sidebar: ['creeazaTest'] } }]">Creeaza test</a>
             <div class="nav-link">
                 <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Setari limba
@@ -34,7 +34,7 @@
         </nav>
 
         <div class="actual-content">
-            <router-outlet></router-outlet>
+            <router-outlet name="sidebar"></router-outlet>
         </div>
 
     </div>

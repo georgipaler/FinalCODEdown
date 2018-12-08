@@ -7,6 +7,7 @@ import { TesteleMeleComponent } from './pagini-profesor/testele-mele/testele-mel
 import { RapoarteStudentiComponent } from './pagini-profesor/rapoarte-studenti/rapoarte-studenti.component';
 import { CatalogComponent } from './pagini-profesor/catalog/catalog.component';
 import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-test.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-tes
     TesteleMeleComponent,
     RapoarteStudentiComponent,
     CatalogComponent,
-    CreeazaTestComponent
+    CreeazaTestComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,

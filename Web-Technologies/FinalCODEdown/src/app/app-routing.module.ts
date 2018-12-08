@@ -6,11 +6,29 @@ import { CatalogComponent } from './pagini-profesor/catalog/catalog.component';
 import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-test.component';
 
 const routes: Routes =[
-  { path: '', redirectTo: 'testeProf', pathMatch: 'full'},
-  { path: 'testeProf', component: TesteleMeleComponent},
-  { path: 'rapoarteProf', component: RapoarteStudentiComponent},
-  { path: 'catalog', component: CatalogComponent},
-  { path: 'creeazaTest', component: CreeazaTestComponent}
+  { path: '',
+   redirectTo: 'testeProf', 
+   pathMatch: 'full'},
+
+  { path: 'testeProf', 
+    component: TesteleMeleComponent,
+    outlet: "sidebar"
+  },
+
+  { path: 'rapoarteProf', 
+  component: RapoarteStudentiComponent,
+  outlet: "sidebar"
+},
+
+  { path: 'catalog', 
+    component: CatalogComponent,
+    outlet: "sidebar"
+  },
+
+  { path: 'creeazaTest', 
+    component: CreeazaTestComponent,
+    outlet: "sidebar"
+  }
 ];
 
 @NgModule({
