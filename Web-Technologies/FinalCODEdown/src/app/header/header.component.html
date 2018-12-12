@@ -1,0 +1,16 @@
+<div id="headerComponent" class="header">
+  <div id="logoWrapper" class="logoWrapper">
+      <a id="logoLink" class="logo" [routerLink]="['/homePage', {outlets: {sidebar: ['testeProf']}}]">
+          <img id="logoImg" src="../assets/logo.png" alt="logo" />
+      </a>
+  </div>
+  <div id="headerButtonsWrapper" class="dropdown buttons">
+      <div id="headerLogoutButton  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../assets/user.png"
+          alt="logo" >MP</div>
+      <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Profil</a>
+          <a class="dropdown-item" href="#">Logout</a>
+      </div>
+  </div>
+
+</div>

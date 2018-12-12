@@ -8,6 +8,9 @@ import { RapoarteStudentiComponent } from './pagini-profesor/rapoarte-studenti/r
 import { CatalogComponent } from './pagini-profesor/catalog/catalog.component';
 import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-test.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ActualContentComponent } from './actual-content/actual-content.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     RapoarteStudentiComponent,
     CatalogComponent,
     CreeazaTestComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    ActualContentComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

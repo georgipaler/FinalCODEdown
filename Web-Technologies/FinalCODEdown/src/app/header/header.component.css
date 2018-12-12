@@ -1,0 +1,51 @@
+.header {
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #208AAE;
+    position: relative;}
+
+ .logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+        
+#logoImg {
+    padding: 0 3rem 0 3rem;
+    width: 10rem;
+    height: 4rem;
+    }
+.buttons {
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #F7F4F3;
+    color: #EDA4BD;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+ div#headerLogoutButton {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border:0;
+ }
+
+ #headerLogoutButton:hover{
+    background-color:#208AAE ;
+    border-radius: 1rem;
+ 
+    }
+
+.dropdown-menu.show {
+      margin-top: 20px; 
+}
