@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "460365580477",
+    "firebase_url": "https://finalcodedown-3ce22.firebaseio.com",
+    "project_id": "finalcodedown-3ce22",
+    "storage_bucket": "finalcodedown-3ce22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460365580477:android:875826f41b75eba4",
+        "android_client_info": {
+          "package_name": "com.example.android.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460365580477-l9evf576hduu9hv0lk2olmbmspfo4bl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXe97AEg70Yu8IZclEcIrVWrI7_9-1TnQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

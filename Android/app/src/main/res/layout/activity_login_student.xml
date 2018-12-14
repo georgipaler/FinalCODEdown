@@ -25,7 +25,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/usernameStudent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -35,21 +35,22 @@
         android:hint="@string/username" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordStudent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/userName"
+        android:layout_below="@+id/usernameStudent"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
         android:drawableLeft="@drawable/ic_lock"
-        android:hint="@string/password" />
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLoginStudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/passwordStudent"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -60,7 +61,7 @@
         android:id="@+id/cbRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
+        android:layout_below="@+id/btnLoginStudent"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
