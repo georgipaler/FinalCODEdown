@@ -11,6 +11,9 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ActualContentComponent } from './actual-content/actual-content.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     WelcomePageComponent,
     ActualContentComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CatalogStudentiComponent
   ],
   imports: [
     BrowserModule,

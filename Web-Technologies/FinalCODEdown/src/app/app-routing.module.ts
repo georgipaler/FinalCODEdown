@@ -6,6 +6,8 @@ import { CatalogComponent } from './pagini-profesor/catalog/catalog.component';
 import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-test.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ActualContentComponent } from './actual-content/actual-content.component';
+import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
+
 
 const routes: Routes = [
   {
@@ -32,6 +34,11 @@ const routes: Routes = [
       {
         path: 'catalog',
         component: CatalogComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'catalogStudenti',
+        component: CatalogStudentiComponent,
         outlet: "sidebar"
       },
       {
