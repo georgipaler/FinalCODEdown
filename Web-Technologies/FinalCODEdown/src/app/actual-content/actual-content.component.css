@@ -38,6 +38,7 @@ nav.nav{
     background: #F7F4F3;
     flex-grow: 1;
     padding: 2rem;
+    overflow: auto;
 }
 
 a.nav-link{

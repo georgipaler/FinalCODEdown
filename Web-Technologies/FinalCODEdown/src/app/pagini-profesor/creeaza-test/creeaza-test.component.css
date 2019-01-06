@@ -4,7 +4,7 @@
     padding-bottom: 3rem; 
 }
 
-input {
+input.radiusMargin {
     width: 100%;
 
     border:none;
@@ -12,6 +12,7 @@ input {
 }
 
 .radiusMargin{
+    
     border-radius: 10px;
     padding: .3rem .6rem;
     background-color: transparent;
@@ -31,4 +32,21 @@ div.container{
 
 button.btn{
     min-width: 8rem;
+}
+
+.questionContainer{
+    margin-top: 5rem;
+    padding: 0.5rem;
+    box-shadow: 4px 6px 6px 6px #c2c2c2;
+}
+
+.questionInput{
+    width: 100%;
+    border: solid 0.5px black;
+}
+
+
+button.btn.btn-light:hover{
+    background-color: #007bff;
+    color: white;
 }
