@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-creeaza-test',
   templateUrl: './creeaza-test.component.html',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreeazaTestComponent implements OnInit {
 
-  constructor() { }
+  titleForm: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.initNameTestForm();
   }
+
+  private initNameTestForm() {
+    this.titleForm = this.fb.group({
+      testName: ["", [Validators.required]]
+    });
+}
+
+assignName(){
+  console.log("Form title!")
+}
 
 }

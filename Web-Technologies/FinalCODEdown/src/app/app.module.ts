@@ -12,6 +12,7 @@ import { ActualContentComponent } from './actual-content/actual-content.componen
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
+import { FormBuilder } from '@angular/forms';
 
 
 
@@ -32,7 +33,7 @@ import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-stud
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
