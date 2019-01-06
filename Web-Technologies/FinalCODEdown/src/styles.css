@@ -18,3 +18,9 @@ body {
     font-weight: bold;
     padding-bottom: 3rem; 
 }
+
+app-footer{
+    background: #F7F4F3;
+   border-top: solid .1px #6E8898;
+   font-size: .8rem;
+}
