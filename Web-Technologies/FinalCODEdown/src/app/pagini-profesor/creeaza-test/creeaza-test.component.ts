@@ -8,7 +8,7 @@ import { IIntrebare } from 'src/app/models';
 })
 export class CreeazaTestComponent implements OnInit {
 
-
+  public titleComponent= "Creeaza test nou";
   public questionsList: IIntrebare[] = [];
 
   titleForm: FormGroup;
@@ -30,7 +30,7 @@ assignName(){
 
 createQuestion(type: string){
   let q = {
-    id: 20,
+    id: 20+this.questionsList.length,
     titlu : "",
     tip: type,
     varianteRaspuns :[]
@@ -38,7 +38,7 @@ createQuestion(type: string){
   this.questionsList.push(q);
 }
 
-deleteQuestion(intrebare: IIntrebare){
+removeQuestion(intrebare: IIntrebare){
   const index = this.questionsList.findIndex(q => q.id === intrebare.id);
   this.questionsList.splice(index, 1);
 }

@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
 import { FormBuilder } from '@angular/forms';
+import { QuestionCardComponent } from './pagini-profesor/creeaza-test/question-card/question-card.component';
 
 
 
@@ -27,7 +28,8 @@ import { FormBuilder } from '@angular/forms';
     ActualContentComponent,
     HeaderComponent,
     FooterComponent,
-    CatalogStudentiComponent
+    CatalogStudentiComponent,
+    QuestionCardComponent
   ],
   imports: [
     BrowserModule,
