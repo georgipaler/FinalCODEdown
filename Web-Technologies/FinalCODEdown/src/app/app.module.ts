@@ -16,6 +16,8 @@ import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punc
 import { FormBuilder } from '@angular/forms';
 import { QuestionCardComponent } from './pagini-profesor/creeaza-test/question-card/question-card.component';
 import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/lista-teste.component';
+import { StudentContentComponent } from './student-content/student-content.component';
+import { StartTestComponent } from './start-test/start-test.component';
 
 
 
@@ -34,7 +36,9 @@ import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/
     CatalogStudentiComponent,
     PunctajeTesteComponent,
     QuestionCardComponent,
-    ListaTesteComponent
+    ListaTesteComponent,
+    StudentContentComponent,
+    StartTestComponent
   ],
   imports: [
     BrowserModule,

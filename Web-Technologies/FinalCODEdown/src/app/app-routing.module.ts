@@ -9,6 +9,8 @@ import { ActualContentComponent } from './actual-content/actual-content.componen
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
 import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
 import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/lista-teste.component';
+import { StudentContentComponent } from './student-content/student-content.component';
+import { StartTestComponent } from './start-test/start-test.component';
 
 
 const routes: Routes = [
@@ -60,6 +62,15 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'studentPage', component: StudentContentComponent, children: [
+      {
+        path: 'startTest',
+        component: StartTestComponent,
+        outlet: "sidebar"
+      }
+    ]
+  }
 
 ];
 
