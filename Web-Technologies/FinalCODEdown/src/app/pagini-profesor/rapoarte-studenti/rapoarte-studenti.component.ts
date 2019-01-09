@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as models from 'src/app/models';
+import { IRaport, RAPOARTE } from 'src/app/models';
 @Component({
   selector: 'app-rapoarte-studenti',
   templateUrl: './rapoarte-studenti.component.html',
@@ -9,7 +9,7 @@ export class RapoarteStudentiComponent implements OnInit {
 
   constructor() { }
 
-  public listaRapoarte: Array<models.IRaport> = models.RAPOARTE;
+  public listaRapoarte: Array<IRaport> = RAPOARTE;
 
   ngOnInit() {
   }
