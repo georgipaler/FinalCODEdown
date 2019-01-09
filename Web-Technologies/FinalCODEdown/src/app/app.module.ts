@@ -12,6 +12,7 @@ import { ActualContentComponent } from './actual-content/actual-content.componen
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
+import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
 
 
 
@@ -26,7 +27,8 @@ import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-stud
     ActualContentComponent,
     HeaderComponent,
     FooterComponent,
-    CatalogStudentiComponent
+    CatalogStudentiComponent,
+    PunctajeTesteComponent
   ],
   imports: [
     BrowserModule,

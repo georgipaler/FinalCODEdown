@@ -7,6 +7,7 @@ import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-tes
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ActualContentComponent } from './actual-content/actual-content.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
+import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,11 @@ const routes: Routes = [
       {
         path: 'rapoarteProf',
         component: RapoarteStudentiComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'punctajeTeste',
+        component: PunctajeTesteComponent,
         outlet: "sidebar"
       },
       {
