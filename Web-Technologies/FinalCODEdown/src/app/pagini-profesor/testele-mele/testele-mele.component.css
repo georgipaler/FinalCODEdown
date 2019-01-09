@@ -65,5 +65,12 @@
 
 h1{
 	
-	color:#208AAE;
+  color:#208AAE;
+}
+i.material-icons{
+    cursor: pointer;
+}
+
+.table td, .table th{
+    text-align: center;
 }

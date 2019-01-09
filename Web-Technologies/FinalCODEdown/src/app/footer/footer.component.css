@@ -1,0 +1,9 @@
+.container{
+    background: #F7F4F3;
+    border-top: solid .1px #6E8898;
+    padding: 0.5rem;
+}
+
+a{
+    cursor: pointer;
+}

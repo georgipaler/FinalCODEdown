@@ -21,6 +21,7 @@ colors: #208AAE; -albastru inchis
 
 
 .main-container{
+   
     flex:1;
     display: flex;
     flex-direction: row;
@@ -36,6 +37,8 @@ nav.nav{
 .actual-content{
     background: #F7F4F3;
     flex-grow: 1;
+    padding: 2rem;
+    overflow: auto;
 }
 
 a.nav-link{

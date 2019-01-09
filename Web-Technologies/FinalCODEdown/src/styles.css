@@ -12,3 +12,15 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+.titleWrapper{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 3rem; 
+}
+
+app-footer{
+    background: #F7F4F3;
+   border-top: solid .1px #6E8898;
+   font-size: .8rem;
+}

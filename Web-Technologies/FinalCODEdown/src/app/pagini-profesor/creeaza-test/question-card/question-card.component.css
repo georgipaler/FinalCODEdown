@@ -1,0 +1,14 @@
+button.btn{
+    min-width: 8rem;
+}
+
+.questionContainer{
+    margin-top: 5rem;
+    padding: 0.5rem;
+    box-shadow: 4px 6px 6px 6px #c2c2c2;
+}
+
+.questionInput{
+    width: 100%;
+    border: solid 0.5px black;
+}

@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
 import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
+import { FormBuilder } from '@angular/forms';
+import { QuestionCardComponent } from './pagini-profesor/creeaza-test/question-card/question-card.component';
 
 
 
@@ -28,13 +30,14 @@ import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punc
     HeaderComponent,
     FooterComponent,
     CatalogStudentiComponent,
-    PunctajeTesteComponent
+    PunctajeTesteComponent,
+    QuestionCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

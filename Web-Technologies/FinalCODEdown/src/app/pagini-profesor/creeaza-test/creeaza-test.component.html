@@ -1,3 +1,45 @@
-<p>
-  creeaza-test works!
-</p>
+<div class="titleWrapper">
+  {{titleComponent}}
+</div>
+
+<form class="titleForm">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="form-group">
+          <input class="radiusMargin" formControlName="testName" value="Untitled quiz">
+        </div>
+      </div>
+      <div class="col-sm">
+        <button class="radiusMargin" (click)="assignName()">Done</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<div *ngFor="let question of questionsList">
+  <app-question-card [question]="question" (myQuestion)="removeQuestion($event)"></app-question-card>
+</div>
+
+<div class="questionWrapper">
+  Questions:
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <button (click)="createQuestion('multiple')" type="button" class="btn btn-outline-danger">Multiple choice
+        </button>
+
+      </div>
+      <div class="col-sm">
+        <button (click)="createQuestion('TF')" type="button" class="btn btn-outline-success">True/False</button>
+      </div>
+      <div class="col-sm">
+        <button (click)="createQuestion('short')" type="button" class="btn btn-outline-info">Short answer</button>
+      </div>
+    </div>
+  </div>
+
+</div>

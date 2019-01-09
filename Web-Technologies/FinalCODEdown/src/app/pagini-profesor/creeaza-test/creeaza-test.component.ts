@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { IIntrebare } from 'src/app/models';
 @Component({
   selector: 'app-creeaza-test',
   templateUrl: './creeaza-test.component.html',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreeazaTestComponent implements OnInit {
 
-  constructor() { }
+  public titleComponent= "Creeaza test nou";
+  public questionsList: IIntrebare[] = [];
+
+  titleForm: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.initNameTestForm();
   }
+
+  private initNameTestForm() {
+    this.titleForm = this.fb.group({
+      testName: ["", [Validators.required]]
+    });
+}
+
+assignName(){
+  console.log("Form title!")
+}
+
+createQuestion(type: string){
+  let q = {
+    id: 20+this.questionsList.length,
+    titlu : "",
+    tip: type,
+    varianteRaspuns :[]
+  }
+  this.questionsList.push(q);
+}
+
+removeQuestion(intrebare: IIntrebare){
+  const index = this.questionsList.findIndex(q => q.id === intrebare.id);
+  this.questionsList.splice(index, 1);
+}
 
 }
