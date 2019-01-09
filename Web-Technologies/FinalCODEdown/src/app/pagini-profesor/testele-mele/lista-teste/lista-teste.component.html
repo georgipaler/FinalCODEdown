@@ -1,0 +1,24 @@
+<div class="titleWrapper">
+  Testele mele
+</div>
+
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Denumire</th>
+      <th scope="col">Data</th>
+      <!--<th scope="col">Descarca</th>-->
+      <th scope="col">Sterge</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let test of listaTeste; let i=index">
+    <tr>
+      <th scope="row">{{ i + 1}}</th>
+      <td>{{ test.denumire}}</td>
+      <td> {{ test.data }} </td>
+      <!--<td> <i  (click)="downloadTest(test)" class="material-icons">save_alt</i></td>-->
+      <td> <i  (click)="deleteTest(test)" class="material-icons">delete</i></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,11 +1,16 @@
 .body {
-	background-color:white;
+
 	color:LightPink;
-	display:grid;
-	width:100vw;
-	height:100vh;
+
+	width:100%;
+	height:100%;
 	margin:0px;
-	padding-left:10px;
+
+}
+h1{
+	
+  color:#208AAE;
+  margin-left: 60px;
 }
 
 .dropbtn {
@@ -67,3 +72,5 @@ h1{
 	
 	color:#208AAE;
 }
+
+

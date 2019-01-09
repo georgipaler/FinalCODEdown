@@ -1,70 +1,21 @@
 <title> Testele mele </title>
 <h1>Materii</h1>
 <div class="Container-1 grid-container dropdown">
-  <button class="dropbtn">Java</button>
-    <div class="dropdown-content">
-      <a href="#">Testul 1</a>
-      <a href="#">Testul 2</a>
-      <a href="#">Testul 3</a>
+  <button type="button" class="dropbtn" type="button"
+  [routerLink]="['/homePage', { outlets: {sidebar: ['listaTeste'] } }]">Java</button>
     </div>
-   </div>
    
   <div class="Container-2 grid-container dropdown">
-  <button class="dropbtn">SDD</button>
-    <div class="dropdown-content">
-      <a href="#">Testul 1</a>
-      <a href="#">Testul 2</a>
-      <a href="#">Testul 3</a>
-    <a href="#">Testul 4</a>
-    <a href="#">Testul 5</a>
-    <a href="#">Testul 6</a>
-    </div>
-   </div>
+  <button class="dropbtn" type="button"  [routerLink]="['/homePage', { outlets: {sidebar: ['listaTeste'] } } ]">SDD</button>
+  </div>
    
    <div class="Container-2 grid-container dropdown">
-  <button class="dropbtn">POO</button>
-    <div class="dropdown-content">
-      <a href="#">Testul 1</a>
-      <a href="#">Testul 2</a>
-      <a href="#">Testul 3</a>
-    <a href="#">Testul 4</a>
-    <a href="#">Testul 5</a>
-    <a href="#">Testul 6</a>
-    </div>
-   </div>
+  <button class="dropbtn" type="button"
+  [routerLink]="['/homePage', { outlets: {sidebar: ['listaTeste'] } }] ">POO</button>
+  </div>
    
    <div class="Container-2 grid-container dropdown">
-  <button class="dropbtn">DAM</button>
-    <div class="dropdown-content">
-    <a href="#">Testul 1</a>
-      <a href="#">Testul 2</a>
-      <a href="#">Testul 3</a>
-    <a href="#">Testul 4</a>
-    <a href="#">Testul 5</a>
-    <a href="#">Testul 6</a>
-    </div>
-   </div>
-<div class="titleWrapper">
-  Testele mele
-</div>
+  <button class="dropbtn" type="button"
+  [routerLink]="['/homePage', { outlets: {sidebar: ['listaTeste'] }}] ">DAM</button>
+  </div>
 
-<table class="table table-borderless">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Denumire</th>
-      <th scope="col">Data</th>
-      <th scope="col">Descarca</th>
-      <th scope="col">Sterge</th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let test of listaTeste; let i=index">
-    <tr>
-      <th scope="row">{{ i + 1}}</th>
-      <td>{{ test.denumire}}</td>
-      <td> {{ test.data }} </td>
-      <td> <i  (click)="downloadTest(test)" class="material-icons">save_alt</i></td>
-      <td> <i  (click)="deleteTest(test)" class="material-icons">delete</i></td>
-    </tr>
-  </tbody>
-</table>

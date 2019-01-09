@@ -9,7 +9,7 @@
 }
 
 .dropbtn {
-  background-color: #208AAE ;
+  background-color:LightPink ;
   color: white;
   padding:16px;
   font-size: 16px;
@@ -26,18 +26,7 @@
    height: 60px; width:180px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: Bisque  ;
-  min-width: 200px;
-  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 
-  margin-left:150px;
-  margin-top:0px;
-}
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -49,7 +38,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #208AAE;
+	background-color: LightCoral ;
 	}
 
 /* Show the dropdown menu on hover */
@@ -59,18 +48,12 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	background-color: #208AAE;
-	color:LightPink;
+	background-color: LightCoral ;
+	color:#208AAE;
 }
 
 h1{
 	
   color:#208AAE;
-}
-i.material-icons{
-    cursor: pointer;
-}
-
-.table td, .table th{
-    text-align: center;
+  margin-left: 60px;
 }

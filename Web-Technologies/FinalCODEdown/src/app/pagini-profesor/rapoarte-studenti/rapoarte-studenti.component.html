@@ -1,45 +1,29 @@
 <div class="titleWrapper">
   Rapoarte studenti
 </div>
-<h1>TESTELE MELE</h1>
+
 
 
 <table class="table">
- 
+ <thead>
   <tr>
-    <th>ID</th>
-    <th>NUME TEST</th>
-    <th>DATA</th>
-    <th>COD</th>
+    <th scope="col">ID</th>
+    <th scope="col">Denumire</th>
+    <th scope="col">Data</th>
+    <th scope="col">Cod</th>
+    <th scope="col">Descarca</th>
  
   </tr>
-
+</thead>
+<tbody *ngFor="let raport of listaRapoarte; let i=index">
   <tr>
-    <th>1</th>
-    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">Pointeri</a></td>
-    <td>12/10/2018</td>
-    <td class="nota1">feather1</td>
+    <th scope="row">{{i+1}}</th>
+    <td>{{raport.numeRaport}}</td>
+    <td>{{raport.dataRaport}}</td>
+    <td>{{raport.codRaport}}</td>
     </tr>
-  <tr>
-     <th>2</th>
-    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">Clase-derivari</a></td>
-    <td>19/10/2018</td>
-  <td class="nota1">feather2</td>
-  </tr>
-  <tr>
-    <th>3</th>
-    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">Clase-mosteniri</a></td>
-    <td>26/10/2018</td>
-    <td class="nota1">feather3</td>
-  </tr>
-  <tr>
-    <th>4</th>
-    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">Liste</a></td>
-    <td>03/12/2018</td>
-    <td class="nota1">feather4</td>
  
-  </tr>
-
+</tbody>
 </table>
 
 

@@ -17,6 +17,13 @@ export interface IIntrebare {
     varianteRaspuns ?: string[];
 }
 
+export interface IRaport  {
+    id: number;
+    numeRaport: string;  
+    dataRaport ?: string;
+    codRaport ?: string;
+
+}
 
 export const LISTAINTREBARI = [
     {
@@ -43,7 +50,7 @@ export const TESTE = [
     {
       id: 1,
       denumire: "Testul 1",
-      data: "10.03,2018",
+      data: "10.03.2018",
       intrebari: LISTAINTREBARI
     },
     {
@@ -64,4 +71,30 @@ export const TESTE = [
       data: "27.11.2018",
       intrebari: LISTAINTREBARI
     },
+];
+export const RAPOARTE=[
+{
+    id:1,
+    numeRaport:"Ponteri",
+    dataRaport:"12.10.2018",
+    codRaport:"feather1"
+},
+{
+    id:2,
+    numeRaport:"Clase-derivari",
+    dataRaport:"19.10.2018",
+    codRaport:"feather2"
+},
+{
+    id:3,
+    numeRaport:"Mosteniri",
+    dataRaport:"26.10.2018",
+    codRaport:"feather3"
+},
+{
+    id:4,
+    numeRaport:"Maps",
+    dataRaport:"03.11.2018",
+    codRaport:"feather4"
+},
 ];

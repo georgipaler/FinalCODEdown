@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   user : any = {
     nume: "Madalina",
     prenume: "Pana",
-    grupa: "1073"
+    id: "panamadalina16@stud.ase.ro"
   }
   constructor() { }
 
