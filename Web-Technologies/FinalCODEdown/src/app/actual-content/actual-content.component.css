@@ -35,7 +35,9 @@ nav.nav{
 }
 
 .actual-content{
-    background: #F7F4F3;
+    /* background-image: url("/../../assets/background-carti.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
     flex-grow: 1;
     padding: 2rem;
     overflow: auto;

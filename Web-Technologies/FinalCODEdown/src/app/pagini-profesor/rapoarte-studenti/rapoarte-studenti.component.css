@@ -1,3 +1,7 @@
 .table td, .table th{
     text-align: center;
 }
+
+i.material-icons{
+    cursor: pointer;
+}
