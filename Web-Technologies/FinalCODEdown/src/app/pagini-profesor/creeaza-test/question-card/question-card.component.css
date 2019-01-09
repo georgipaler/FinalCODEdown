@@ -12,3 +12,7 @@ button.btn{
     width: 100%;
     border: solid 0.5px black;
 }
+
+i.material-icons{
+    cursor: pointer;
+}
