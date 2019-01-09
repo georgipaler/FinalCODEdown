@@ -10,7 +10,7 @@ import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-stud
 import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
 import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/lista-teste.component';
 import { StudentContentComponent } from './student-content/student-content.component';
-import { StartTestComponent } from './start-test/start-test.component';
+import { StartTestComponent } from './pagini-student/start-test/start-test.component';
 
 
 const routes: Routes = [

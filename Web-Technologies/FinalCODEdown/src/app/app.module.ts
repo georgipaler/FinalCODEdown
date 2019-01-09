@@ -17,7 +17,7 @@ import { FormBuilder } from '@angular/forms';
 import { QuestionCardComponent } from './pagini-profesor/creeaza-test/question-card/question-card.component';
 import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/lista-teste.component';
 import { StudentContentComponent } from './student-content/student-content.component';
-import { StartTestComponent } from './start-test/start-test.component';
+import { StartTestComponent } from './pagini-student/start-test/start-test.component';
 
 
 
