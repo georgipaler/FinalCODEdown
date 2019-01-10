@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UtilsService } from 'src/services/utils/utils.service';
 
 @Component({
   selector: 'app-start-test',
@@ -10,7 +11,9 @@ export class StartTestComponent implements OnInit {
   
   public code: any = "";
   codeForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+              private utilService: UtilsService)
+   { }
 
   ngOnInit() {
     this.initCodeForm();
@@ -27,6 +30,7 @@ export class StartTestComponent implements OnInit {
 
 
   startQuizz(){
+    this.utilService.codeTest = this.code;
     console.log("start quizz", this.code)
   }
 
