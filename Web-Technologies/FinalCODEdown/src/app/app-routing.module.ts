@@ -5,12 +5,16 @@ import { RapoarteStudentiComponent } from './pagini-profesor/rapoarte-studenti/r
 import { CatalogComponent } from './pagini-profesor/catalog/catalog.component';
 import { CreeazaTestComponent } from './pagini-profesor/creeaza-test/creeaza-test.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { ActualContentComponent } from './actual-content/actual-content.component';
 import { CatalogStudentiComponent } from './pagini-profesor/catalog/catalog-studenti/catalog-studenti.component';
 import { PunctajeTesteComponent } from './pagini-profesor/rapoarte-studenti/punctaje-teste/punctaje-teste.component';
 import { ListaTesteComponent } from './pagini-profesor/testele-mele/lista-teste/lista-teste.component';
-import { StudentContentComponent } from './student-content/student-content.component';
 import { StartTestComponent } from './pagini-student/start-test/start-test.component';
+import { HomeStudentComponent } from './pagini-student/home-student/home-student.component';
+import { ActualContentComponent } from './pagini-profesor/actual-content/actual-content.component';
+import { StudentContentComponent } from './pagini-student/student-content/student-content.component';
+import { RapoarteleMeleComponent } from './pagini-student/rapoartele-mele/rapoartele-mele.component';
+import { FeedbackComponent } from './pagini-student/feedback/feedback.component';
+import { QuizzComponent } from './pagini-student/quizz/quizz.component';
 
 
 const routes: Routes = [
@@ -65,8 +69,28 @@ const routes: Routes = [
   {
     path: 'studentPage', component: StudentContentComponent, children: [
       {
+        path: 'homeStudent',
+        component: HomeStudentComponent,
+        outlet: "sidebar"
+      },
+      {
         path: 'startTest',
         component: StartTestComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'yourQuizz',
+        component: QuizzComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'rapoarteleMele',
+        component: RapoarteleMeleComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'feedback',
+        component: FeedbackComponent,
         outlet: "sidebar"
       }
     ]
