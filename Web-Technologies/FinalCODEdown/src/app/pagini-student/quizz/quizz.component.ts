@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UtilsService } from 'src/services/utils/utils.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { UtilsService } from 'src/services/utils/utils.service';
   templateUrl: './quizz.component.html',
   styleUrls: ['./quizz.component.css']
 })
-export class QuizzComponent implements OnInit {
+export class QuizzComponent implements OnInit, OnDestroy {
 
   constructor(private utilService: UtilsService) { }
 
@@ -14,5 +14,12 @@ export class QuizzComponent implements OnInit {
     console.log("Quiz code", this.utilService.codeTest);
 
   }
+
+
+  ngOnDestroy(){
+    this.utilService.pauseTimer();
+  }
+
+ 
 
 }

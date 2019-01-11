@@ -1,0 +1,60 @@
+
+.grid{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #F7F4F3;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #208aae;
+    box-shadow: 4px 6px 6px 6px #c2c2c2;
+}
+
+.grid h2{
+    background-color: #208AAE;
+    font-size: 1.5rem;
+    text-align:  center;
+    color: #F7F4F3;
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+
+.buttons {
+    margin-top: 30px;
+   
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.btn-outline-dark{
+    color: #208AAE;
+    border-color: #208AAE;
+    min-width: 100%;
+    
+}
+.btn{
+    border-radius: 50px;
+}
+.btn-outline-dark:hover{
+    color: #F7F4F3;
+    border-color: #208AAE;
+    background-color: #208AAE;
+}
+.btn-outline-dark:focus{
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(181, 196, 201);
+}
+
+.progress-bar{
+    background-color: #208AAE;
+}
+
+p#progress {
+    color: #EDA4BD;
+    font-size: 1rem;
+}
+
+
+

@@ -1,3 +1,42 @@
-<p>
-  quizz works!
-</p>
+<div class="grid">
+
+    <div>
+        <span> Test Code: {{ this.utilService.codeTest}}</span>
+
+        <span> Time elapsed: {{utilService.displayTimeElapsed()}}</span>
+      
+    </div>
+ 
+
+  <div id="quiz">
+    <h2>Aici se afiseaza enuntul la intrebare?</h2>
+    <hr style="margin-top: 20px">
+
+    <div class="buttons">
+      <div class="container ">
+        <div class="row">
+          <div class="col">
+            <button id="choice0" type="button" class="btn btn-outline-dark">Dark</button></div>
+          <div class="col">
+            <button id="choice1" type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+          <div class="w-100"></div>
+          <div class="col" style="padding-top: 1rem">
+            <button id="choice2" type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+          <div class="col" style="padding-top: 1rem">
+            <button id="choice3" type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin-top: 50px">
+    <div>
+      <p id="progress">Question x of y.</p>
+      <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+  </div>
+</div>

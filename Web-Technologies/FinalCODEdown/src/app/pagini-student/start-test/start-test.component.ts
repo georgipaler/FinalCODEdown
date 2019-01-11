@@ -31,6 +31,7 @@ export class StartTestComponent implements OnInit {
 
   startQuizz(){
     this.utilService.codeTest = this.code;
+    this.utilService.startTimer();
     this.router.navigate(['/studentPage', { outlets: {sidebar: ['yourQuizz'] } }]);
   }
 
