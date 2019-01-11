@@ -11,7 +11,8 @@
 .dropbtn {
   background-color:LightPink ;
   color: white;
-  padding:16px;
+  padding-left:16px;
+  padding-bottom: 16px;
   font-size: 16px;
   border: none;
   border-radius: 12px;
@@ -21,9 +22,7 @@
 .dropdown {
   position: relative;
   display: block;
-  padding-top:15px;
-  
-   height: 60px; width:180px;
+  height: 60px; width:180px;
 }
 
 /* Links inside the dropdown */
@@ -50,11 +49,6 @@
 	color:#208AAE;
 }
 
-h1{
-	
-  color:#208AAE;
-  margin-left: 60px;
-}
 .coloane{
   display: inline-block;
 }
