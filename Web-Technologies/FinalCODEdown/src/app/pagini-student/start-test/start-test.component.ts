@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UtilsService } from 'src/services/utils/utils.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start-test',
@@ -12,7 +13,8 @@ export class StartTestComponent implements OnInit {
   public code: any = "";
   codeForm: FormGroup;
   constructor(private fb: FormBuilder,
-              private utilService: UtilsService)
+              private utilService: UtilsService,
+              private router: Router)
    { }
 
   ngOnInit() {
@@ -23,19 +25,16 @@ export class StartTestComponent implements OnInit {
 
   initCodeForm(){
     this.codeForm = this.fb.group({
-      codeValue: [""]
+      codeValue: ["", Validators.required]
     });
   }
 
-
-
   startQuizz(){
     this.utilService.codeTest = this.code;
-    console.log("start quizz", this.code)
+    this.router.navigate(['/studentPage', { outlets: {sidebar: ['yourQuizz'] } }]);
   }
 
   onKey(event: any) { 
     this.code = event.target.value ;
-    console.log("code", this.code)
   }
 }

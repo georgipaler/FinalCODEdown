@@ -1,12 +1,12 @@
 <div>
   <p>Intoduceti codul de acces </p>
-  <form class="titleForm">
+  <form (ngSubmit)="startQuizz()" [formGroup]="codeForm" >
 
     <div class="form-group">
-      <input (keyup)="onKey($event)" class="radiusMargin" formControlName="testName" >
+      <input (keyup)="onKey($event)" class="radiusMargin" formControlName="codeValue" >
     </div>
   
-    <button  (click)="startQuizz()" type="button" class="btn btn-success"  [routerLink]="['/studentPage', { outlets: {sidebar: ['yourQuizz'] } }]"  [disabled]="!codeForm.valid">Start test</button>
+    <button  type="submit" class="btn btn-success"   [disabled]="!codeForm.valid">Start test</button>
   
   </form>
   
