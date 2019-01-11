@@ -2,8 +2,10 @@
   <app-header></app-header>
 
   <div class="main-container">
-      <!-- <nav class="nav flex-column">
-          <a class="nav-link" [routerLink]="['/homePage', {outlets: {sidebar: ['startTest']}}]">Incepe test</a>
+      <nav class="nav flex-column">
+          <a class="nav-link" [routerLink]="['/studentPage', {outlets: {sidebar: ['startTest']}}]">Intra in test</a>
+          <a class="nav-link" [routerLink]="['/studentPage', {outlets: {sidebar: ['rapoarteleMele']}}]">Rapoartele mele</a>
+          <a class="nav-link" [routerLink]="['/studentPage', {outlets: {sidebar: ['feedback']}}]">Feedback</a>
           <div class="nav-link">
               <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Setari limba
@@ -13,7 +15,7 @@
                   <a class="dropdown-item" href="#">Engleza</a>
               </div>
           </div>
-      </nav> -->
+      </nav> 
 
       <div class="actual-content">
           <router-outlet name="sidebar"></router-outlet>
