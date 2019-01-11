@@ -26,8 +26,6 @@
    height: 60px; width:180px;
 }
 
-
-
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -56,4 +54,12 @@ h1{
 	
   color:#208AAE;
   margin-left: 60px;
+}
+.coloane{
+  display: inline-block;
+}
+img{
+  width: 500px;
+  height: 500px;
+  padding-left: 500px;
 }
