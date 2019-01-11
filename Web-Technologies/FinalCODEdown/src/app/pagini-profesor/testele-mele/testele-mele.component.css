@@ -49,11 +49,16 @@
 	color:#208AAE;
 }
 
+.grid-container{
+  margin-bottom: 10%;
+}
+
 .coloane{
   display: inline-block;
+  margin-left: 40%;
+ 
 }
-img{
-  width: 500px;
-  height: 500px;
-  padding-left: 500px;
+.titleWrapper{
+  margin-left: 47%;
+  margin-bottom: 10px;
 }

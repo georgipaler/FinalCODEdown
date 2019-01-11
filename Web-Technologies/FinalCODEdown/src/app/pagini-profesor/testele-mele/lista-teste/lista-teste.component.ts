@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as models from 'src/app/models';
+import { StartTestComponent } from 'src/app/pagini-student/start-test/start-test.component';
 @Component({
   selector: 'app-lista-teste',
   templateUrl: './lista-teste.component.html',
@@ -17,7 +18,11 @@ export class ListaTesteComponent implements OnInit {
  deleteTest(test: models.ITest){
   const index = this.listaTeste.findIndex(testFil => testFil.id === test.id);
   this.listaTeste.splice(index, 1);
+ }
+  StartTestComponent(test:models.ITest){
+
 }
+
 
 downloadTest(test: models.ITest){
   console.log(test)

@@ -68,17 +68,10 @@ h1{
 	color:LightPink;
 }
 
-h1{
-	
-	color:#208AAE;
-}
-
-
 .coloane{
   display: inline-block;
+  margin-left: 40%;
 }
-img{
-  width: 500px;
-  height: 500px;
-  padding-left: 500px;
+.titleWrapper{
+  margin-left: 47%;
 }
