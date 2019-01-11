@@ -16,7 +16,9 @@ body {
 .titleWrapper{
     font-size: 1.2rem;
     font-weight: bold;
-    padding-bottom: 3rem; 
+    color:#208AAE;
+ 
+   /*padding-bottom: 3rem; */
 }
 
 app-footer{
