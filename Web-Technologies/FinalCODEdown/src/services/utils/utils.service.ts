@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UtilsService {
 
-  public codeTest: string;
+  public testInfo;
 
   public interval;
   public timeLeft: number = 0;

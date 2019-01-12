@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UtilsService } from 'src/services/utils/utils.service';
 import { Router } from '@angular/router';
+import { ITest, TESTE } from 'src/app/models';
 
 @Component({
   selector: 'app-start-test',
@@ -10,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class StartTestComponent implements OnInit {
   
+  testInfo: ITest;
+  listaTeste: Array<ITest> = TESTE;
   public code: any = "";
   codeForm: FormGroup;
   constructor(private fb: FormBuilder,
@@ -29,13 +32,28 @@ export class StartTestComponent implements OnInit {
     });
   }
 
+
+  //functia care te baga in test daca codul introduc este cel corect
   startQuizz(){
-    this.utilService.codeTest = this.code;
+    console.log("Test code", this.codeForm.value)
     this.utilService.startTimer();
+    this.utilService.testInfo = this.testInfo;
+    this.extrageTestulGasit(this.testInfo[0])
+    this.verificaCod();
     this.router.navigate(['/studentPage', { outlets: {sidebar: ['yourQuizz'] } }]);
   }
 
-  onKey(event: any) { 
-    this.code = event.target.value ;
+  //verifica daca exista test cu codul introdus
+  verificaCod(): boolean{
+    this.code = this.codeForm.value.codeValue;
+    this.testInfo= this.listaTeste.filter(el => el.codTest == this.code)[0];
+    if(this.testInfo){
+      return true;
+    }
+    return false;
+  }
+
+  extrageTestulGasit(test: ITest){
+
   }
 }

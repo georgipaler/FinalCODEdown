@@ -1,13 +1,24 @@
 <div>
   <p>Intoduceti codul de acces </p>
-  <form (ngSubmit)="startQuizz()" [formGroup]="codeForm" >
+  <form (ngSubmit)="startQuizz()" [formGroup]="codeForm">
 
     <div class="form-group">
-      <input (keyup)="onKey($event)" class="radiusMargin" formControlName="codeValue" >
+      <input class="radiusMargin" formControlName="codeValue">
     </div>
-  
-    <button  type="submit" class="btn btn-success"   [disabled]="!codeForm.valid">Start test</button>
-  
+
+    <div *ngIf="verificaCod() && testInfo.activ">
+      <p>Nume test: {{testInfo.denumire}}</p>
+      <p>Timp alocat: {{testInfo.timp}} min</p>
+      <button type="submit" class="btn btn-success" [disabled]="!verificaCod()">Start test</button>
+    </div>
+    <div *ngIf="!verificaCod() && codeForm.dirty">
+      <p>could not found your test code </p>
+    </div>
+
+
+
   </form>
-  
+
+
+
 </div>

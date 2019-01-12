@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { IIntrebare } from 'src/app/models';
+import { IIntrebare, ITest, TESTE } from 'src/app/models';
 @Component({
   selector: 'app-creeaza-test',
   templateUrl: './creeaza-test.component.html',
@@ -10,6 +10,7 @@ export class CreeazaTestComponent implements OnInit {
 
   public titleComponent= "Creeaza test nou";
   public questionsList: IIntrebare[] = [];
+  public listaTeste: Array<ITest> = TESTE;
 
   titleForm: FormGroup;
   constructor(private fb: FormBuilder) { }
@@ -25,15 +26,15 @@ export class CreeazaTestComponent implements OnInit {
 }
 
 assignName(){
-  console.log("Form title!")
+  console.log("Form title!", this.titleForm.value);
 }
 
 createQuestion(type: string){
   let q = {
     id: 20+this.questionsList.length,
+    idTest: 1,
     titlu : "",
-    tip: type,
-    varianteRaspuns :[]
+    tip: type
   }
   this.questionsList.push(q);
 }

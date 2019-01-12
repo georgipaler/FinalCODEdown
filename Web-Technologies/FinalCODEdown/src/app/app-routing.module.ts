@@ -15,6 +15,7 @@ import { StudentContentComponent } from './pagini-student/student-content/studen
 import { RapoarteleMeleComponent } from './pagini-student/rapoartele-mele/rapoartele-mele.component';
 import { FeedbackComponent } from './pagini-student/feedback/feedback.component';
 import { QuizzComponent } from './pagini-student/quizz/quizz.component';
+import { FinishQuizComponent } from './pagini-student/finish-quiz/finish-quiz.component';
 
 
 const routes: Routes = [
@@ -91,6 +92,11 @@ const routes: Routes = [
       {
         path: 'feedback',
         component: FeedbackComponent,
+        outlet: "sidebar"
+      },
+      {
+        path: 'finishQuiz',
+        component: FinishQuizComponent,
         outlet: "sidebar"
       }
     ]
