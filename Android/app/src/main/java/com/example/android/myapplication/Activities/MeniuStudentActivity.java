@@ -59,6 +59,17 @@ public class MeniuStudentActivity extends AppCompatActivity {
             }
         });*/
 
+        raportActivitateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MeniuStudentActivity.this, RaportStudentActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
         feedbackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +81,7 @@ public class MeniuStudentActivity extends AppCompatActivity {
         deconectareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MeniuStudentActivity.this, StudentLoginActivity.class);
+                Intent intent = new Intent(MeniuStudentActivity.this, StartActivity.class);
                 startActivity(intent);
             }
         });
