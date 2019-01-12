@@ -58,7 +58,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                     User userinfo = userDataSource.infoUser(usernameStudent.getText().toString());
                     intent.putExtra("userInfo", userinfo);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "Ok...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_SHORT).show();
 
 
                     if (result) {
@@ -67,7 +67,7 @@ public class StudentLoginActivity extends AppCompatActivity {
 
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Something wrong...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "User/Password wrong!", Toast.LENGTH_SHORT).show();
                 }
 
             }

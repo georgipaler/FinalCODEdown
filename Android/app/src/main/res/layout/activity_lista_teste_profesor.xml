@@ -7,26 +7,7 @@
     android:orientation="vertical"
     tools:context=".Activities.StartActivity">
 
-    <TextView
-        android:id="@+id/testeProfesorTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/testele_mele"
-        android:textColor="#26C4EC"
-        android:textSize="32dp"
-        android:textStyle="bold" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/testeProfesorLV"
-        android:layout_below="@+id/testeProfesorTV"
-        android:entries="@layout/row_lista_teste_profesor">
-
-    </ListView>
-    <!--<ScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true">
@@ -36,7 +17,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
+            <TextView
+                android:id="@+id/testeleMeleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/testele_mele"
+                android:textColor="#26C4EC"
+                android:textSize="32dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,7 +71,7 @@
                     android:textSize="24dp" />
             </LinearLayout>
 
-           &lt;!&ndash; <Button
+           <!-- <Button
                 android:id="@+id/test1Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -170,9 +160,9 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/background_gri"
                 android:gravity="center"
-                android:text="@string/test_dam_c" />&ndash;&gt;
+                android:text="@string/test_dam_c" />-->
 
         </LinearLayout>
-    </ScrollView>-->
+    </ScrollView>
 
 </RelativeLayout>

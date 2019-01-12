@@ -13,11 +13,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.android.myapplication.R;
-import com.example.android.myapplication.model.Intrebare;
-import com.example.android.myapplication.model.Raspuns;
 
 public class IntrebareRaspunsMultipluActivity extends AppCompatActivity {
-    private TextView textIntrebareRaspunsMultipluTV;
+    private TextView textIntrebareRaspunsMultiplu;
     private FloatingActionButton adaugaRaspunsNou;
     private Button salveazaIntrebare;
 
@@ -29,19 +27,15 @@ public class IntrebareRaspunsMultipluActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intrebare_raspuns_multiplu);
 
-        textIntrebareRaspunsMultipluTV = findViewById(R.id.intrebareRaspunsMultipluTV);
+        textIntrebareRaspunsMultiplu = findViewById(R.id.intrebareRaspunsMultipluTV);
         adaugaRaspunsNou = findViewById(R.id.adaugaVariantaRaspunsFAB);
         salveazaIntrebare = findViewById(R.id.salveazaIntrebareRaspunsMultipluBtn);
 
         raspunsuriLinearLayout = findViewById(R.id.raspunsLL);
        // rowLinearLayout = findViewById(R.id.rowLL);
 
-        /*String intrebare = (String) getIntent().getSerializableExtra("numeIntrebare");
-        textIntrebareRaspunsMultiplu.setText(intrebare);*/
-        Intrebare intrebare = (Intrebare) getIntent().getSerializableExtra("intrebareRaspunsMultiplu");
-        Raspuns raspuns = new Raspuns();
-        raspuns.setIdIntrebare(intrebare.getIdIntrebare());
-        textIntrebareRaspunsMultipluTV.setText(intrebare.getIntrebare());
+        String intrebare = (String) getIntent().getSerializableExtra("numeIntrebare");
+        textIntrebareRaspunsMultiplu.setText(intrebare);
 
         adaugaRaspunsNou.setOnClickListener(new View.OnClickListener() {
             @Override

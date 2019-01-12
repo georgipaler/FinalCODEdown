@@ -12,7 +12,7 @@ import com.example.android.myapplication.model.Intrebare;
 import com.example.android.myapplication.model.Raspuns;
 
 public class IntrebareRaspunsScurtActivity extends AppCompatActivity {
-    private TextView textIntrebareRaspunsScurtTV;
+    private TextView textIntrebareRaspunsScurt;
     private Button salveazaIntrebareRaspunsScurtBtn;
 
     @Override
@@ -20,13 +20,13 @@ public class IntrebareRaspunsScurtActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intrebare_raspuns_scurt);
 
-        textIntrebareRaspunsScurtTV = findViewById(R.id.intrebareRaspunsScurtTV);
+        textIntrebareRaspunsScurt = findViewById(R.id.intrebareRaspunsScurtTV);
         salveazaIntrebareRaspunsScurtBtn = findViewById(R.id.salveazaIntrebareRaspunsScurtBtn);
 
-        Intrebare intrebare = (Intrebare) getIntent().getSerializableExtra("intrebareRaspunsScurt");
+        Intrebare intrebare = (Intrebare) getIntent().getSerializableExtra("intrebare");
         Raspuns raspuns = new Raspuns();
         raspuns.setIdIntrebare(intrebare.getIdIntrebare());
-        textIntrebareRaspunsScurtTV.setText(intrebare.getIntrebare());
+        textIntrebareRaspunsScurt.setText(intrebare.getIntrebare());
 
         salveazaIntrebareRaspunsScurtBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -51,7 +51,6 @@ public class Raspuns implements Serializable {
         this.corect = corect;
     }
 
-
     @Override
     public String toString() {
         return "Raspuns{" +

@@ -26,7 +26,11 @@ public class StartActivity extends AppCompatActivity {
         // todo test addUser in bd
         User user = new User("student", "stud", "123", "Otilia", null,
                 1001,AnStudent.anul1.toString(),null);
+        User user2 = new User("profesor", "prof", "12345", "Feather", null,
+                1002,AnStudent.anul1.toString(),null);
+
         userDataSource.adaugaUser(user);
+        userDataSource.adaugaUser(user2);
 
         profesor = findViewById(R.id.profesorBtn);
         student = findViewById(R.id.studentBtn);
