@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <TextView
         android:id="@+id/intrebareTxt"
@@ -17,8 +17,8 @@
         android:textColor="#26C4EC"
         android:textSize="32dp" />
 
-    <EditText
-        android:id="@+id/intrebareED"
+    <TextView
+        android:id="@+id/intrebareRaspunsAdevaratFalsTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -33,7 +33,7 @@
         android:id="@+id/raspunsuriTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/intrebareED"
+        android:layout_below="@+id/intrebareRaspunsAdevaratFalsTV"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/alege_o_singura_varianta_de_raspuns" />

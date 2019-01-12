@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.util;
 
 import java.util.ArrayList;
 import java.util.List;

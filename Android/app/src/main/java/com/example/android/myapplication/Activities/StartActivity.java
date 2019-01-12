@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.android.myapplication.R;
 import com.example.android.myapplication.dataSource.UserDataSource;
 import com.example.android.myapplication.model.User;
 import com.example.android.myapplication.util.AnStudent;
@@ -25,7 +26,11 @@ public class StartActivity extends AppCompatActivity {
         // todo test addUser in bd
         User user = new User("student", "stud", "123", "Otilia", null,
                 1001,AnStudent.anul1.toString(),null);
+        User user2 = new User("profesor", "prof", "12345", "Feather", null,
+                1002,AnStudent.anul1.toString(),null);
+
         userDataSource.adaugaUser(user);
+        userDataSource.adaugaUser(user2);
 
         profesor = findViewById(R.id.profesorBtn);
         student = findViewById(R.id.studentBtn);

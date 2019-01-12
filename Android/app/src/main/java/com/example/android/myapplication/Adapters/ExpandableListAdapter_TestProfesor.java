@@ -11,7 +11,7 @@ import android.widget.CheckedTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.myapplication.Group;
+import com.example.android.myapplication.util.Group;
 import com.example.android.myapplication.R;
 
 public class ExpandableListAdapter_TestProfesor extends BaseExpandableListAdapter {

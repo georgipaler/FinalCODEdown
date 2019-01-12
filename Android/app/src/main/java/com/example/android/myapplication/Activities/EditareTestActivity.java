@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.Activities;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,6 +11,7 @@ import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
+import com.example.android.myapplication.R;
 
 import java.util.ArrayList;
 

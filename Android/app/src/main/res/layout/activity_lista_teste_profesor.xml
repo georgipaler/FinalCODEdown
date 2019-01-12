@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,8 +44,8 @@
                 <EditText
                     android:id="@+id/cautaEt"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/cauta" />
+                    android:layout_height="wrap_content"
+                    android:hint="@string/cauta" />
             </LinearLayout>
 
             <LinearLayout
@@ -71,7 +71,7 @@
                     android:textSize="24dp" />
             </LinearLayout>
 
-            <Button
+           <!-- <Button
                 android:id="@+id/test1Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/background_gri"
                 android:gravity="center"
-                android:text="@string/test_dam_c" />
+                android:text="@string/test_dam_c" />-->
 
         </LinearLayout>
     </ScrollView>

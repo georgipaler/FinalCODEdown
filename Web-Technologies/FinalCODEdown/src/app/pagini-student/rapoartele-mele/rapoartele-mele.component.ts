@@ -9,6 +9,7 @@ export class RapoarteleMeleComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 

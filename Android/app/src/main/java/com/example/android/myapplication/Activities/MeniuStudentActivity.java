@@ -1,51 +1,75 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.Activities;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.android.myapplication.R;
 import com.example.android.myapplication.model.User;
 
 public class MeniuStudentActivity extends AppCompatActivity {
-    private Button acceseazaTestBtn, deconecteazaBtn, feedbackBtn;
     private TextView  numeUser;
+    private Button profilStudentBtn;
+
+    private Button accesareTestBtn;
+    private Button raportActivitateBtn;
+    private Button feedbackBtn;
+    private Button deconectareBtn;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meniu_student);
-        User infoUser = (User) getIntent().getSerializableExtra("userInfo");
+
         numeUser= findViewById(R.id.infoText);
+        profilStudentBtn = findViewById(R.id.profilStudentBtn);
+
+        accesareTestBtn = findViewById(R.id.accesareTestBtn);
+        raportActivitateBtn = findViewById(R.id.raportActivitateBtn);
+        feedbackBtn = findViewById(R.id.feedbackBtn);
+        deconectareBtn = findViewById(R.id.deconectareBtn);
+
+
+        User infoUser = (User) getIntent().getSerializableExtra("userInfo");
+
 
         if(infoUser.getNume() != null){
             numeUser.setText(infoUser.getNume());
         }
 
-        acceseazaTestBtn = findViewById(R.id.acceseazatestBtn);
-        deconecteazaBtn = findViewById(R.id.deconectare);
-        feedbackBtn = findViewById(R.id.feedbackBtn);
+        profilStudentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeniuStudentActivity.this, ProfilStudentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         /*acceseazaTestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MeniuStudentActivity.this, ScanActivity.class));
             }
         });*/
-        deconecteazaBtn.setOnClickListener(new View.OnClickListener() {
+
+        raportActivitateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MeniuStudentActivity.this, StudentLoginActivity.class);
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MeniuStudentActivity.this, RaportStudentActivity.class);
                 startActivity(intent);
+
+
             }
         });
+
         feedbackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +77,15 @@ public class MeniuStudentActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        deconectareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MeniuStudentActivity.this, StartActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void requestCameraPermssion(){

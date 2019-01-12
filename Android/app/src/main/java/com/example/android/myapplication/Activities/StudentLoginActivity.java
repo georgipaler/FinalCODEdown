@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,9 +10,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.android.myapplication.R;
 import com.example.android.myapplication.dataSource.UserDataSource;
 import com.example.android.myapplication.model.User;
-import com.example.android.myapplication.util.AnStudent;
 
 public class StudentLoginActivity extends AppCompatActivity {
     private EditText usernameStudent;
@@ -58,7 +58,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                     User userinfo = userDataSource.infoUser(usernameStudent.getText().toString());
                     intent.putExtra("userInfo", userinfo);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "Ok...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_SHORT).show();
 
 
                     if (result) {
@@ -67,7 +67,7 @@ public class StudentLoginActivity extends AppCompatActivity {
 
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Something wrong...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "User/Password wrong!", Toast.LENGTH_SHORT).show();
                 }
 
             }

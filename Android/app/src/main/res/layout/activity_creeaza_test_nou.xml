@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/testNouTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/creaza_test_nou"
+        android:textColor="#26C4EC"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/numeTestET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/testNouTV"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="12dp"
+        android:drawableLeft="@drawable/ic_question"
+        android:gravity="center"
+        android:hint="Nume test" />
+
+    <Button
+        android:id="@+id/adaugaIntrebareNouaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_albastru"
+        android:text="Adauga intrebare noua" />
+
+
+</RelativeLayout>

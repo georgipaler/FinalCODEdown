@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/listaUtilizatoriTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista Utilizatori"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/utilizatoriRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@layout/recycler_view_row_utilizatori"
+        android:layout_below="@id/listaUtilizatoriTV"
+        android:layout_marginTop="20dp"/>
+
+    <!--<ListView
+        android:id="@+id/utilizatoriList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@layout/recyclerView_row_utilizatori"
+        android:layout_below="@id/listaUtilizatoriTV"
+        android:layout_marginTop="20dp">
+    </ListView>-->
+
+</RelativeLayout>

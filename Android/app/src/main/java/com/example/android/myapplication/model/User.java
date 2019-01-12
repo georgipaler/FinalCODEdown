@@ -9,10 +9,10 @@ import java.util.Date;
 
 public class User implements Serializable {
     private int id;
+    private String nume;
     private String profil;
     private String username;
     private String password;
-    private String nume;
     private String materie;
     private int grupa;
     private String anStudent;

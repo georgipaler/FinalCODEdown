@@ -1,15 +1,15 @@
-package com.example.android.myapplication;
+package com.example.android.myapplication.Activities;
 
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.SparseArray;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import com.example.android.myapplication.Adapters.ExpandableListAdapter_TestProfesor;
+import com.example.android.myapplication.R;
+import com.example.android.myapplication.util.Group;
 
 import org.json.JSONArray;
 import org.json.JSONException;
