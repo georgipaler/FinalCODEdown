@@ -13,6 +13,9 @@ export class QuizzComponent implements OnInit, OnDestroy {
 
   indexIntrebare: number = 0;
   nrIntrebari: number;
+  scor: number = 0;
+  isCorect: boolean = false;
+
 
   infoTest: ITest;
   intrebareCurenta: IIntrebare;
@@ -39,8 +42,9 @@ export class QuizzComponent implements OnInit, OnDestroy {
 
   nextQuestion() {
 
-    console.log("intrebare curenta", this.indexIntrebare);
-    console.log("nr intrebari", this.nrIntrebari)
+    if(this.isCorect){
+      this.scor ++;
+    }
     this.intrebareCurenta = this.listaIntrebari[this.indexIntrebare];
 
     if (this.indexIntrebare < this.nrIntrebari) {
@@ -50,8 +54,19 @@ export class QuizzComponent implements OnInit, OnDestroy {
       this.router.navigate(['/studentPage', { outlets: {sidebar: ['finishQuiz'] } }]);
     }
 
+    console.log("intrebare curenta", this.indexIntrebare);
+    console.log("nr intrebari", this.nrIntrebari)
+    console.log("scor", this.scor)
   }
 
+  answer(raspuns: IRaspuns){
+    this.isCorect = raspuns.raspunsCorect;
+    console.log(raspuns)
+  }
+
+  progressBar(){
+    return Math.floor(((this.indexIntrebare ) * 100 ) / this.nrIntrebari);
+  }
   ngOnDestroy() {
     this.utilService.pauseTimer();
   }

@@ -16,7 +16,7 @@
       <div class="container ">
         <div class="row">
           <div class="col" *ngFor="let raspuns of getAnswers(intrebareCurenta)">
-            <button type="button" class="btn btn-outline-dark">{{raspuns.enunt}}</button>
+            <button (click)="answer(raspuns)" type="button" class="btn btn-outline-dark">{{raspuns.enunt}}</button>
           </div>
 
           <div class="w-100"></div>
@@ -31,10 +31,10 @@
 
     <hr style="margin-top: 1rem">
     <div>
-      <p id="progress">Question x of y.</p>
+      <p id="progress">Question {{this.indexIntrebare}} of {{this.nrIntrebari}}.</p>
       <div class="progress">
         <div class="progress-bar" role="progressbar"  [style.width.%]="((this.indexIntrebare ) * 100 ) / this.nrIntrebari" aria-valuenow="(this.indexIntrebare +1) * 10" aria-valuemin="0"
-          aria-valuemax="100"> {{this.indexIntrebare}}/{{this.nrIntrebari}}</div>
+          aria-valuemax="100"> {{progressBar()}} %  </div>
       </div>
     </div>
   </div>

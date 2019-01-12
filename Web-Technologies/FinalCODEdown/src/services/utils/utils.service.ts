@@ -9,7 +9,7 @@ export class UtilsService {
 
   public interval;
   public timeLeft: number = 0;
-  
+  public testTime: number = 0;
 
   constructor() { }
 
@@ -18,7 +18,7 @@ export class UtilsService {
       if(this.timeLeft > 0) {
         this.timeLeft--;
       } else {
-        this.timeLeft = 1800;
+        this.timeLeft = this.testTime * 60;
       }
     },1000)
   }

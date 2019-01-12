@@ -36,6 +36,8 @@ export class StartTestComponent implements OnInit {
   //functia care te baga in test daca codul introduc este cel corect
   startQuizz(){
     console.log("Test code", this.codeForm.value)
+
+    this.utilService.testTime = this.testInfo.timp;
     this.utilService.startTimer();
     this.utilService.testInfo = this.testInfo;
     this.extrageTestulGasit(this.testInfo[0])

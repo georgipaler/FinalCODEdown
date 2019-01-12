@@ -19,7 +19,7 @@
     border-radius: 50px;
 }
 
-.buttons {
+.buttonsWrapper {
     margin-top: 30px;
    
     display: flex;
@@ -43,8 +43,11 @@
     background-color: #208AAE;
 }
 .btn-outline-dark:focus{
+    background-color: #EDA4BD;
     font-weight: bold;
     text-shadow: 1px 1px rgb(181, 196, 201);
+    color: #F7F4F3;
+    border: none;
 }
 
 .progress-bar{
