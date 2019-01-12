@@ -3,205 +3,25 @@
 
 
 <table class="table">
- 
-  <tr>
-    <th>ID</th>
-    <th>NUME</th>
-    <th>PRENUME</th>
-    <th >S1</th>
-  <th >S2</th>
-  <th>S3</th>
-  <th>S4</th>
-  <th>S5</th>
-  <th>S6</th>
-  <th>S7</th>
-  <th>S8</th>
-  <th>S9</th>
-  <th>S10</th>
-  <th>TOTAL</th>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NUME</th>
+      <th>PRENUME</th>
+      <th class="note" *ngFor="let data of dateTest"> {{data}}</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stud of listaStudenti; let i=index">
+      <th>{{i+1}}</th>
+      <td>{{stud.nume}}</td>
+      <td>{{stud.prenume}}</td>
+      <td [ngClass]="{'verde': culoareNota(nota), 'rosu': !culoareNota(nota)} " class="note" *ngFor="let nota of stud.note">
+        {{nota}}
+        </td>
   
-  </tr>
-
-  <tr>
-    <th>1</th>
-    <td>Niculae</td>
-    <td>Andreea</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">56%</td>
-  <td class="nota6">77%</td>
-  <td class="nota7">80%</td>
-  <td class="nota8">0%</td>
-  <td class="nota9">21%</td>
-  <td class="nota10">90%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-     <th>2</th>
-    <td>Pahon</td>
-    <td>Flavia</td>
-  <td class="nota1">56%</td>
-  <td class="nota2">77%</td>
-  <td class="nota3">80%</td>
-    <td class="nota4">0%</td>
-  <td class="nota5">80%</td>
-  <td class="nota6">50%</td>
-  <td class="nota7">0%</td>
-  <td class="nota8">21%</td>
-  <td class="nota9">90%</td>
-  <td class="nota10">100%</td>
-  <td class="total">-</td>
-  
-  </tr>
-  <tr>
-    <th>3</th>
-    <td>Paler</td>
-    <td>Georgiana</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>4</th>
-    <td>Pana</td>
-    <td>Madalina</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>3</th>
-    <td>Paraschiv</td>
-    <td>Andra</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>5</th>
-    <td>Petcu</td>
-    <td>Otilia</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>6</th>
-    <td>Partas</td>
-    <td>Laurentiu</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>7</th>
-    <td>Pavelescu</td>
-    <td>Alexandra</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>8</th>
-    <td>Popescu</td>
-    <td>Anca</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-  <tr>
-    <th>9</th>
-    <td>Tarabega</td>
-    <td>Rares</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-
-  </tr>
-  <tr>
-    <th>10</th>
-    <td>Toma</td>
-    <td>Lavinia</td>
-    <td class="nota1">97%</td>
-  <td class="nota2">80%</td>
-  <td class="nota3">50%</td>
-  <td class="nota4">0%</td>
-  <td class="nota5">21%</td>
-  <td class="nota6">90%</td>
-  <td class="nota7">100%</td>
-  <td class="nota8">56%</td>
-  <td class="nota9">77%</td>
-  <td class="nota10">80%</td>
-  <td class="total">-</td>
-  </tr>
-
-
+    </tr>
+  <tbody>
 </table>
-
-
