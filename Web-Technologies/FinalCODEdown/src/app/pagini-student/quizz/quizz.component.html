@@ -12,21 +12,18 @@
     <h2><span>{{this.indexIntrebare}}.</span> {{intrebareCurenta.titlu}}</h2>
     <hr style="margin-top: 20px">
 
-    <div class="buttons">
-      <div class="container ">
-        <div class="row">
-          <div class="col" *ngFor="let raspuns of getAnswers(intrebareCurenta)">
-            <button (click)="answer(raspuns)" type="button" class="btn btn-outline-dark">{{raspuns.enunt}}</button>
-          </div>
-
-          <div class="w-100"></div>
-        </div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons"  >
+       <div *ngFor="let raspuns of getAnswers(intrebareCurenta)">
+          <label class="btn btn-secondary " (click)="answer(raspuns)" >
+              <input type="radio" name="options" autocomplete="off" > {{raspuns.enunt}}
+            </label>
+       </div>
+    
       </div>
-    </div>
 
     <hr style="margin-top: 2rem">
     <div class="nextWrapper">
-      <button (click)="nextQuestion()" type="button" class="btn btn-success">Next</button>
+      <button (click)="nextQuestion()" type="button" class="btn btn-success" [disabled]="!canGoNext">Next</button>
     </div>
 
     <hr style="margin-top: 1rem">

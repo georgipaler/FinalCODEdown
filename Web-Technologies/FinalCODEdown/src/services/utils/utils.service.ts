@@ -11,6 +11,9 @@ export class UtilsService {
   public timeLeft: number = 0;
   public testTime: number = 0;
 
+  scor: number = 0;
+  nrIntrebari: number = 0;
+
   constructor() { }
 
   startTimer() {

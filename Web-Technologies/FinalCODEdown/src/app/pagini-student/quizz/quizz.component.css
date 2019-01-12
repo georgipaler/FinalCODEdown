@@ -28,28 +28,6 @@
 
 }
 
-.btn-outline-dark{
-    color: #208AAE;
-    border-color: #208AAE;
-    min-width: 100%;
-    
-}
-.btn{
-    border-radius: 50px;
-}
-.btn-outline-dark:hover{
-    color: #F7F4F3;
-    border-color: #208AAE;
-    background-color: #208AAE;
-}
-.btn-outline-dark:focus{
-    background-color: #EDA4BD;
-    font-weight: bold;
-    text-shadow: 1px 1px rgb(181, 196, 201);
-    color: #F7F4F3;
-    border: none;
-}
-
 .progress-bar{
     background-color: #208AAE;
 }
@@ -63,5 +41,26 @@ p#progress {
     text-align: center;
 }
 
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+    background-color: #EDA4BD;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(181, 196, 201);
+    color: #F7F4F3;
+    border: none;
+}
 
+.btn.btn-secondary{
+    color: #208AAE;
+    border-color: #208AAE;
+    background-color: #F7F4F3;
+    min-width: 10rem;
+    border-radius: 50px;
+}
+
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.5rem;
+}
 

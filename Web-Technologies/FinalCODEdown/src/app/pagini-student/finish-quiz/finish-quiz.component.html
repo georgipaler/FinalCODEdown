@@ -1,3 +1,15 @@
-<p>
-  finish-quiz works!
-</p>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <div *ngIf="calculeazaPRocent()">
+          <h5 class="card-title">Felicitari! Ati completat testul!</h5>
+      </div>
+      <div *ngIf="!calculeazaPRocent()">
+          <h5>Ati completat testul! Mai e de munca!</h5>
+      </div>
+      
+      <p class="card-text">Numar raspunsuri corecte: {{utilService.scor}}</p>
+      <p class="card-text">Numar total intrebari: {{utilService.nrIntrebari}}</p>
+      <p class="card-text">Scor total: {{percentage}} %</p>
+      <button (click)="goToRapoarte()" class="btn btn-outline-info">Vezi rapoarte</button>
+    </div>
+  </div>

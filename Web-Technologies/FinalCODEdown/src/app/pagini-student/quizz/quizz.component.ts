@@ -15,7 +15,7 @@ export class QuizzComponent implements OnInit, OnDestroy {
   nrIntrebari: number;
   scor: number = 0;
   isCorect: boolean = false;
-
+  canGoNext: boolean = false;
 
   infoTest: ITest;
   intrebareCurenta: IIntrebare;
@@ -42,6 +42,8 @@ export class QuizzComponent implements OnInit, OnDestroy {
 
   nextQuestion() {
 
+    this.canGoNext = false;
+
     if(this.isCorect){
       this.scor ++;
     }
@@ -51,6 +53,8 @@ export class QuizzComponent implements OnInit, OnDestroy {
       this.indexIntrebare++;
     }
     else{
+      this.utilService.scor = this.scor;
+      this.utilService.nrIntrebari = this.nrIntrebari;
       this.router.navigate(['/studentPage', { outlets: {sidebar: ['finishQuiz'] } }]);
     }
 
@@ -61,6 +65,7 @@ export class QuizzComponent implements OnInit, OnDestroy {
 
   answer(raspuns: IRaspuns){
     this.isCorect = raspuns.raspunsCorect;
+    this.canGoNext = true;
     console.log(raspuns)
   }
 
