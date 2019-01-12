@@ -67,6 +67,14 @@
         android:layout_marginTop="20dp"
         android:text="@string/remember_me" />
 
+    <TextView
+        android:id="@+id/forgotPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cbRemember" />
+
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

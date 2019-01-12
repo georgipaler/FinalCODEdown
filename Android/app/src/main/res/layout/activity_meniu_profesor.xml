@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <LinearLayout
         android:id="@+id/profile"
@@ -58,7 +58,7 @@
 
 
         <Button
-            android:id="@+id/testeleMele"
+            android:id="@+id/testeProfesorBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -82,7 +82,7 @@
             android:text="@string/catalogNote" />
 
         <Button
-            android:id="@+id/creazaTest"
+            android:id="@+id/creeazaTestNouBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_gri"

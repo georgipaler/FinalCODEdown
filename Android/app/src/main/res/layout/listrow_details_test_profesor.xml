@@ -5,7 +5,7 @@
     android:clickable="true"
     android:orientation="vertical"
     android:paddingLeft="40dp"
-    tools:context=".TestProfesorActivity" >
+    tools:context=".Activities.TestProfesorActivity" >
 
     <TextView
         android:id="@+id/textView1"

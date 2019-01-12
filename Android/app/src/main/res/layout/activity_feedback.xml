@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <TextView
         android:id="@+id/TXTIntrebare"
@@ -18,68 +18,13 @@
         android:textSize="24dp"
         android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="140dp"
-        android:orientation="horizontal">
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:orientation="horizontal"
-            android:text="@string/RGFeedback">
-
-            <RadioButton
-                android:id="@+id/RBFeedback1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:button="@android:drawable/btn_star"
-                android:text="@string/_1" />
-
-            <RadioButton
-                android:id="@+id/RBFeedback2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:button="@android:drawable/btn_star"
-                android:checked="false"
-                android:clickable="false"
-                android:text="@string/_2" />
-
-            <RadioButton
-                android:id="@+id/RBFeedback3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:button="@android:drawable/btn_star"
-                android:text="@string/_3" />
-
-            <RadioButton
-                android:id="@+id/RBFeedback4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:button="@android:drawable/btn_star"
-                android:text="@string/_4" />
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@android:drawable/btn_star"
-                android:checked="false"
-                android:text="@string/_5" />
-        </RadioGroup>
-    </LinearLayout>
+   <RatingBar
+       android:id="@+id/feedbackRB"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@id/TXTIntrebare"
+       android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/raspunsuriTxt"

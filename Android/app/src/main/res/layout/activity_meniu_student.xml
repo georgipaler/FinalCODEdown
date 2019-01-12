@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <LinearLayout
         android:id="@+id/profile"
@@ -17,10 +16,10 @@
         android:paddingTop="50px">
 
         <ImageView
-            android:layout_width="200px"
-            android:layout_height="200px"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@drawable/img"
-            android:paddingLeft="50px" />
+            android:paddingLeft="50dp" />
 
         <LinearLayout
             android:id="@+id/infoProfile"
@@ -38,12 +37,12 @@
 
 
             <Button
-                android:id="@+id/profilulMeu"
+                android:id="@+id/profilStudentBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
                 android:gravity="center"
-                android:text="@string/profilulMeu"
+                android:text="Profilul meu"
                 android:textColor="#26c4ec" />
         </LinearLayout>
     </LinearLayout>
@@ -58,7 +57,7 @@
 
 
         <Button
-            android:id="@+id/acceseazatestBtn"
+            android:id="@+id/accesareTestBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -66,30 +65,20 @@
             android:text="@string/intraTest" />
 
         <Button
-            android:id="@+id/raportulMeu"
+            android:id="@+id/raportActivitateBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
             android:text="@string/raport" />
 
-        <Button
+       <!-- <Button
             android:id="@+id/setari"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
-            android:text="@string/setari" />
-
-        <Button
-            android:id="@+id/deconectare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/background_gri"
-            android:text="@string/deconectare" />
-
-
+            android:text="@string/setari" />-->
         <Button
             android:id="@+id/feedbackBtn"
             android:layout_width="match_parent"
@@ -97,6 +86,17 @@
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
             android:text="@string/feedback" />
+
+        <Button
+            android:id="@+id/deconectareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_gri"
+            android:text="@string/deconectare" />
+
+
+
 
     </LinearLayout>
 

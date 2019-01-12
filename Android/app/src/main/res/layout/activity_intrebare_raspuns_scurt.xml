@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
 
     <TextView
         android:id="@+id/intrebareTxt"
@@ -17,8 +17,8 @@
         android:textColor="#26C4EC"
         android:textSize="32dp" />
 
-    <EditText
-        android:id="@+id/intrebareED"
+    <TextView
+        android:id="@+id/intrebareRaspunsScurtTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/intrebareTxt"
@@ -33,7 +33,7 @@
         android:id="@+id/raspunsuriTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/intrebareED"
+        android:layout_below="@+id/intrebareRaspunsScurtTV"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="16dp"
@@ -51,6 +51,7 @@
         android:hint="@string/raspuns" />
 
     <Button
+        android:id="@+id/salveazaIntrebareRaspunsScurtBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

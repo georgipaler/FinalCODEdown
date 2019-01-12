@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".Activities.StartActivity">
+
+<!--
+    Raport general pentru profesor
+-->
 
     <TextView
         android:id="@+id/raportTestTxt"

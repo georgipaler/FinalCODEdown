@@ -143,6 +143,41 @@
     <string name="an">Anul </string>
     <string name="edit">Editeaza profil</string>
 
+    <string-array name="profil">
+        <item>Admin</item>
+        <item>Profesor</item>
+        <item>Student</item>
+    </string-array>
+    <string name="profil">Profil</string>
+
+    <string-array name="grupa">
+        <item>1070</item>
+        <item>1071</item>
+        <item>1072</item>
+        <item>1073</item>
+        <item>1074</item>
+        <item>1075</item>
+    </string-array>
+
+    <string-array name="an">
+        <item>Anul 1</item>
+        <item>Anul 2</item>
+        <item>Anul 3</item>
+        <item>An suplimentar</item>
+    </string-array>
+
+    <string-array name="specializare">
+        <item>Informatica Economica</item>
+        <item>Cibernetica Economica</item>
+        <item>Statistica</item>
+    </string-array>
+
+    <string-array name="variante_raspuns">
+        <item>Raspuns multiplu</item>
+        <item>Raspuns adevarat/fals</item>
+        <item>Raspuns scurt</item>
+    </string-array>
+
 </resources>
 
 

@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
+
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,21 +16,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        <activity android:name=".Activities.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudentLoginActivity" />
-        <activity android:name=".ProfesorLoginActivity" />
-        <activity android:name=".MeniuStudentActivity" />
-        <activity android:name=".ScanActivity" />
-        <activity android:name=".ListaStudentiTestActivity" />
-        <activity android:name=".TestProfesorActivity" />
-        <activity android:name=".EditareTestActivity" />
-        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".Activities.StudentLoginActivity" />
+        <activity android:name=".Activities.ProfesorLoginActivity" />
+        <activity android:name=".Activities.MeniuStudentActivity" />
+        <activity android:name=".Activities.AdaugareUserActivity" />
+        <activity android:name=".Activities.ListaStudentiTestActivity" />
+        <activity android:name=".Activities.TestProfesorActivity" />
+        <activity android:name=".Activities.EditareTestActivity" />
+        <activity android:name=".Activities.FeedbackActivity" />
+        <activity android:name=".Activities.ForgotPasswordActivity" />
+        <activity android:name=".Activities.ProfilStudentActivity" />
+        <activity android:name=".Activities.ScanActivity" />
+        <activity android:name=".Activities.MeniuProfesorActivity" />
+        <activity android:name=".Activities.CreeazaTestNouActivity" />
+        <activity android:name=".Activities.AdaugaIntrebareActivity"/>
+        <activity android:name=".Activities.IntrebareRaspunsMultipluActivity"/>
+        <activity android:name=".Activities.IntrebareRspunsAdevaratFalsActivity" />
+        <activity android:name=".Activities.IntrebareRaspunsScurtActivity" />
+        <activity android:name=".Activities.ListaUtilizatoriActivity"/>
+        <activity android:name=".Activities.ListaTesteProfesorActivity"/>
     </application>
 
 </manifest>
