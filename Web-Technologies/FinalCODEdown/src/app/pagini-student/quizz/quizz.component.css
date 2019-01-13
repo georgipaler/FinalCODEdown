@@ -42,7 +42,7 @@ p#progress {
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
-    background-color: #EDA4BD;
+    background-color: #86BBD8;
     font-weight: bold;
     text-shadow: 1px 1px rgb(181, 196, 201);
     color: #F7F4F3;

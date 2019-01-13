@@ -49,10 +49,7 @@ export class StartTestComponent implements OnInit {
   verificaCod(): boolean{
     this.code = this.codeForm.value.codeValue;
     this.testInfo= this.listaTeste.filter(el => el.codTest == this.code)[0];
-    if(this.testInfo){
-      return true;
-    }
-    return false;
+    return this.testInfo ? true : false;
   }
 
   extrageTestulGasit(test: ITest){

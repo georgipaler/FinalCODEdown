@@ -1,3 +1,29 @@
-<p>
-  punctaje-teste works!
-</p>
+<div class="titleWrapper">
+    Punctaje test
+  </div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NUME</th>
+      <th>PRENUME</th>
+      <th>GRUPA</th>
+      <th>Punctaj</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stud of listaStudenti; let i=index">
+      <th>1</th>
+      <td></td>
+      <td></td>
+      <td [ngClass]="{'verde': culoareNota(nota), 'rosu': !culoareNota(nota)} " class="note" >
+       
+        </td>
+  
+    </tr>
+  <tbody>
+</table>

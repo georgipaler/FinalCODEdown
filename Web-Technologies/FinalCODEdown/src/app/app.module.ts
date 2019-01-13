@@ -23,6 +23,7 @@ import { RapoarteleMeleComponent } from './pagini-student/rapoartele-mele/rapoar
 import { FeedbackComponent } from './pagini-student/feedback/feedback.component';
 import { QuizzComponent } from './pagini-student/quizz/quizz.component';
 import { FinishQuizComponent } from './pagini-student/finish-quiz/finish-quiz.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -49,6 +50,7 @@ import { FinishQuizComponent } from './pagini-student/finish-quiz/finish-quiz.co
     FeedbackComponent,
     QuizzComponent,
     FinishQuizComponent,
+    LoginComponent,
     
   ],
   imports: [

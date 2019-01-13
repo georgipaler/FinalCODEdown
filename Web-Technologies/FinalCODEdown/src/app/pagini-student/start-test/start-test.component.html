@@ -8,6 +8,7 @@
 
     <div *ngIf="verificaCod() && testInfo.activ">
       <p>Nume test: {{testInfo.denumire}}</p>
+      <p>Materie: {{testInfo.materie}}</p>
       <p>Timp alocat: {{testInfo.timp}} min</p>
       <button type="submit" class="btn btn-success" [disabled]="!verificaCod()">Start test</button>
     </div>

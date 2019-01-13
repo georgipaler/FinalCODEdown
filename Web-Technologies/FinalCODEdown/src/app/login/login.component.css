@@ -1,0 +1,23 @@
+form.loginWrapper{
+    width: 50%;
+
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 4px 6px 6px 6px #c2c2c2;
+}
+
+label,
+
+.small, small{
+    float: left;
+}
+
+
+.form-group{
+    margin-bottom: 3rem;
+}
+
+.btn-primary{
+    background-color: #208AAE;
+    border-color: #208AAE;
+}

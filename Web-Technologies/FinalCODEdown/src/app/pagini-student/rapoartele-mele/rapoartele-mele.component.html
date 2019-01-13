@@ -1,3 +1,29 @@
-<p>
-  rapoartele-mele works!
-</p>
+
+
+
+<h1>Grupa X</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NUME</th>
+      <th>PRENUME</th>
+      <th class="note" *ngFor="let data of dateTest"> {{data}}</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stud of listaStudenti; let i=index">
+      <th>{{i+1}}</th>
+      <td>{{stud.nume}}</td>
+      <td>{{stud.prenume}}</td>
+      <td [ngClass]="{'verde': culoareNota(nota), 'rosu': !culoareNota(nota)} " class="note" *ngFor="let nota of stud.note">
+        {{nota}}
+        </td>
+  
+    </tr>
+  <tbody>
+</table>

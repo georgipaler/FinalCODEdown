@@ -14,7 +14,8 @@ export interface ITest {
     data?: string;
     timp: number;
     codTest: string;
-    activ?: boolean
+    activ?: boolean;
+    materie: string;
 
 }
 
@@ -141,7 +142,8 @@ export const TESTE = [
         data: "10.03.2018",
         codTest: "123",
         timp: 30,
-        activ: true
+        activ: true,
+        materie: "JAVA"
     },
     {
         id: 2,
@@ -149,7 +151,8 @@ export const TESTE = [
         data: "21.03.2018",
         codTest: "123ab",
         timp:40,
-        activ: true
+        activ: true,
+        materie: "Android"
     },
     {
         id: 3,
@@ -157,7 +160,8 @@ export const TESTE = [
         data: "17.10.2018",
         codTest: "123abc",
         timp:40,
-        activ: false
+        activ: false,
+        materie: "SDD"
     },
     {
         id: 4,
@@ -165,33 +169,39 @@ export const TESTE = [
         data: "27.11.2018",
         codTest: "abc",
         timp:40,
-        activ: true
+        activ: true,
+        materie: "POO"
     },
 ];
 export const RAPOARTE = [
     {
         id: 1,
-        numeRaport: "Ponteri",
         dataRaport: "12.10.2018",
-        codRaport: "feather1"
+        idTest : 4,
+        punctaj: 60,
+        idUser: 3
+
     },
     {
         id: 2,
-        numeRaport: "Clase-derivari",
         dataRaport: "19.10.2018",
-        codRaport: "feather2"
+        idTest: 3,
+        punctaj: 70,
+        idUser: 2
     },
     {
         id: 3,
-        numeRaport: "Mosteniri",
         dataRaport: "26.10.2018",
-        codRaport: "feather3"
+        idTest: 3,
+        punctaj: 70,
+        idUser: 4
     },
     {
         id: 4,
-        numeRaport: "Maps",
         dataRaport: "03.11.2018",
-        codRaport: "feather4"
+        idTest: 3,
+        punctaj: 70,
+        idUser: 1
     },
 ];
 
@@ -204,19 +214,19 @@ export const STUDENTI = [
         note: [10, 60, 80, 50]
     },
     {
-        id: 1,
+        id: 2,
         nume: "Pahona",
         prenume: "Flavia",
         note: [20, 0, 80, 50]
     },
     {
-        id: 1,
+        id: 3,
         nume: "Paler",
         prenume: "Georgina",
         note: [40, 60, 80, 50]
     },
     {
-        id: 1,
+        id: 4,
         nume: "Paulas",
         prenume: "Corina",
         note: [10, 90, 80, 50]
