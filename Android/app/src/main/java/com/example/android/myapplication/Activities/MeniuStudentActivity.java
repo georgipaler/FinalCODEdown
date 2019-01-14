@@ -19,7 +19,7 @@ public class MeniuStudentActivity extends AppCompatActivity {
 
     private Button accesareTestBtn;
     private Button raportActivitateBtn;
-    private Button feedbackBtn;
+    private Button echipaBtn;
     private Button deconectareBtn;
 
     @Override
@@ -32,7 +32,7 @@ public class MeniuStudentActivity extends AppCompatActivity {
 
         accesareTestBtn = findViewById(R.id.accesareTestBtn);
         raportActivitateBtn = findViewById(R.id.raportActivitateBtn);
-        feedbackBtn = findViewById(R.id.feedbackBtn);
+        echipaBtn = findViewById(R.id.BTNechipa);
         deconectareBtn = findViewById(R.id.deconectareBtn);
 
 
@@ -70,10 +70,10 @@ public class MeniuStudentActivity extends AppCompatActivity {
             }
         });
 
-        feedbackBtn.setOnClickListener(new View.OnClickListener() {
+        echipaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MeniuStudentActivity.this, FeedbackActivity.class);
+                Intent intent = new Intent(MeniuStudentActivity.this, EchipaActivity.class);
                 startActivity(intent);
             }
         });

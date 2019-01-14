@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Echipa noastra"
+           />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:text="Bună, noi suntem Final CODEdown, o echipa formata din 5 studente românce pasionate, care au elaborat o aplicație mobila de simulare a banalelor teste."
+       />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* De ce aplicația noastră ? *"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Pentru că prin intermediul acesteia economisim timp si hârtie, vă oferim o alternativă interactiva si eficientă pentru susținerea unui test și nu în ultimul rând utilizăm o metoda inovativă pentru a putea fi cu un pas mai aproape de viitorul tehnologizat spre care aspirăm cu totii!"
+
+            />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="UTILIZARE"
+        android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Aplicația implementată propune o dublă funcționalitate, atât pentru profesori cât si pentru studenți, cu scopul evaluării acestora.
+Dacă modul de utilizare a aplicției este selectat din meniu ca fiind “Profesor”, funcționalitatea acesteia constă în faptul că utilizatorul are acces la toate testele care au fost deja create, le poate modifica, șterge sau chiar poate creea un test nou. Deasemenea, este oferit accesul în permanența la toate punctajele opținute de care studenți, acestea fiind organizate atât în funcție de ziua si codul testului care a fost susținut, cât și in funcție de grupa din care face parte studentul.
+În cazul în care a fost selectat meniul “Student”, funcționalitatea programului consta în faptul ca acesta poate să susțina un test în format electronic și în faptul că nu este nevoit să astepte până la publicarea rezultatului , punctajul fiind dezvaluit imediat după finalizarea evaluării. Un alt lucru de menționat, menit sa atraga utilizatorii spre a folosi această platformă, este faptul că testul poate rula atât pe un computer, în mod traditional, cât și pe un dispozitiv mobil, fiind mult mai accesibil pentru platforma Android.
+Modalitatea de a intra în test prin generarea, respectiv scanarea codului Qr reprezintă una dintre funcționalitațile majore are aplicației, facilitând accesul tuturor utilizatorilor."
+
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="CONTACT"
+                android:layout_marginTop="10dp"/>
+          <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Telefon: 0762607258"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Email: echipa.castigatoare@code.com"
+                android:layout_marginTop="10dp"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCATIE"
+                android:id="@+id/BTNlocatie"/>
+            <Button
+                android:id="@+id/feedbackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="FEEDBACK"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+

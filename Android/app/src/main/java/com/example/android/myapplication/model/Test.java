@@ -6,15 +6,17 @@ public class Test implements Serializable {
     private int idTest;
     private String numeTest;
     private String materie;
+    private int id_profesor;
 
     public Test() {
 
     }
 
-    public Test(int idTest, String numeTest, String materie) {
+    public Test(int idTest, String numeTest, String materie, int id_profesor) {
         this.idTest = idTest;
         this.numeTest = numeTest;
         this.materie = materie;
+        this.id_profesor=id_profesor;
     }
 
     public int getIdTest() {
@@ -41,12 +43,21 @@ public class Test implements Serializable {
         this.materie = materie;
     }
 
+    public int getId_profesor() {
+        return id_profesor;
+    }
+
+    public void setId_profesor(int id_profesor) {
+        this.id_profesor = id_profesor;
+    }
+
     @Override
     public String toString() {
         return "Test{" +
                 "idTest=" + idTest +
                 ", numeTest='" + numeTest + '\'' +
                 ", materie='" + materie + '\'' +
+                ", id_profesor=" + id_profesor +
                 '}';
     }
 }

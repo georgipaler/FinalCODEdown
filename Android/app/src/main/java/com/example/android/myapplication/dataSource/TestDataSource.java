@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class TestDataSource {
     private SQLiteDatabase database;
     private UserDBHelper testHelper;
-    private final String[] COLUMN_NAMES = {"_idTest", "numeTest", "materie"};
+    private final String[] COLUMN_NAMES = {"_idTest", "numeTest", "materie", "id_profesor"};
     private final String TABLE_NAME = "test";
 
     public TestDataSource(Context context){
@@ -33,6 +33,7 @@ public class TestDataSource {
         ContentValues cv = new ContentValues();
         cv.put("numeTest", test.getNumeTest());
         cv.put("materie", test.getMaterie());
+        cv.put("id_profesor", test.getId_profesor());
         Log.i("Add Test", test.toString());
         database.insert(TABLE_NAME, null, cv);
     }
@@ -49,6 +50,7 @@ public class TestDataSource {
             test.setIdTest(cursor.getInt(0));
             test.setNumeTest(cursor.getString(1));
             test.setMaterie(cursor.getString(2));
+            test.setId_profesor(cursor.getInt(2));
             teste.add(test);
             cursor.moveToNext();
         }

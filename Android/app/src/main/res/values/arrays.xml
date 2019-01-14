@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+    <string-array name="SPlistaTeste">
+        <item>Poniteri</item>
+        <item>Maps</item>
+        <item>Ceva</item>
+    </string-array>
+</resources>

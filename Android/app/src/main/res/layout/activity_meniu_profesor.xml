@@ -38,12 +38,12 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/profilulMeu"
+                android:id="@+id/BTNprofilProfesor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
                 android:gravity="center"
-                android:text="@string/profilulMeu"
+                android:text="Profilul meu"
                 android:textColor="#26c4ec" />
         </LinearLayout>
     </LinearLayout>
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_gri"
             android:layout_marginBottom="12dp"
-            android:text="@string/creeazaTest" />
+            android:text="Creeaza test nou"/>
 
         <Button
             android:id="@+id/BTNrapoarte"
@@ -78,15 +78,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
-            android:text="@string/rapoarteStudent" />
+            android:text="Rapoarte studenti" />
 
         <Button
-            android:id="@+id/feedbackBtn"
+             android:id="@+id/BTNechipa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
-            android:text="@string/feedback" />
+            android:text="Despre aplicatie"/>
         <Button
             android:id="@+id/deconectareBtn"
             android:layout_width="match_parent"

@@ -23,7 +23,8 @@ import java.net.URLConnection;
 public class TestProfesorActivity extends Activity {
     SparseArray<Group> groups = new SparseArray<Group>();
     ExpandableListView listView;
-    String urlJSON = "https://api.myjson.com/bins/yz012";
+   // String urlJSON = "https://api.myjson.com/bins/yz012";//LISTA TESTE
+    String urlJSON="https://api.myjson.com/bins/lmn4w";//lista PROFESORI
     ExpandableListAdapter_TestProfesor adapter;
 
     @Override
@@ -43,6 +44,7 @@ public class TestProfesorActivity extends Activity {
         } );
 
     }
+
 
    public void createData() {
         for (int j = 0; j < 10; j++) {

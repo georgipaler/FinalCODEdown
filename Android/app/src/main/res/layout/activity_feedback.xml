@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="@string/feedback_test"
+        android:text="Evalueaza aplicatia"
         android:textColor="#26C4EC"
         android:textSize="24dp"
         android:textStyle="bold" />

@@ -24,10 +24,21 @@ public class StartActivity extends AppCompatActivity {
         userDataSource.openDB();
 
         // todo test addUser in bd
-        User user = new User("student", "stud", "123", "Otilia", null,
+        User user = new User("student1", "stud", "123", "Otilia", null,
                 1001,AnStudent.anul1.toString(),null);
-        User user2 = new User("profesor", "prof", "12345", "Feather", null,
+        User user2 = new User("student2", "stud", "123", "Otilia", null,
+                1001,AnStudent.anul1.toString(),null);
+
+        User user3 = new User("student3", "stud", "123", "Otilia", null,
+                1001,AnStudent.anul1.toString(),null);
+
+        User user4 = new User("profesor1", "prof", "12345", "Feather", null,
                 1002,AnStudent.anul1.toString(),null);
+
+        User user5 = new User("profesor2", "prof", "12345", "Feather", null,
+                1002,AnStudent.anul1.toString(),null);
+
+
 
         userDataSource.adaugaUser(user);
         userDataSource.adaugaUser(user2);

@@ -15,7 +15,7 @@ public class TestDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE test (_idTest INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "numeTest TEXT NOT NULL, materie TEXT)");
+                "numeTest TEXT NOT NULL, materie TEXT, id_profesor INT NOT NULL)");
     }
 
     @Override

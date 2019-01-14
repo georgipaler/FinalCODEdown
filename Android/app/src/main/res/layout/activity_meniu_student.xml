@@ -80,12 +80,12 @@
             android:background="@drawable/background_gri"
             android:text="@string/setari" />-->
         <Button
-            android:id="@+id/feedbackBtn"
+            android:id="@+id/BTNechipa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@drawable/background_gri"
-            android:text="@string/feedback" />
+            android:text="Despre aplicatie" />
 
         <Button
             android:id="@+id/deconectareBtn"
