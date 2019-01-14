@@ -29,9 +29,10 @@ export interface IIntrebare {
 
 export interface IRaport {
     id: number;
-    numeRaport: string;
-    dataRaport?: string;
-    codRaport?: string;
+    dataRaport:  string;
+    idTest: number;
+    punctaj: number;
+    idUser: number;
 
 }
 
@@ -135,7 +136,8 @@ export const LISTARASPUNSURI = [
     },
 ]
 
-export const TESTE = [
+export const TESTE: Array<ITest> = [
+
     {
         id: 1,
         denumire: "Testul 1",

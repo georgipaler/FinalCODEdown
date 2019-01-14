@@ -2,22 +2,23 @@
   {{titleComponent}}
 </div>
 
-<form class="titleForm" [formGroup]="titleForm">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="form-group">
-          <input class="radiusMargin" formControlName="testName" value="Untitled quiz">
-        </div>
-      </div>
-      <div class="col-sm">
-        <button class="radiusMargin" (click)="assignName()">Done</button>
-      </div>
-    </div>
+ <div class="containerWrapper">
+    <form class="titleForm" [formGroup]="titleForm">
+            <div class="form-group">
+              <input class="basicInput" formControlName="testName" placeholder="Titlul testului">
+            </div>
+            
+             <div class="form-group">
+              <input class="basicInput" type="number"  formControlName="time" placeholder="Timpul alocat testului">
+               <small id="emailHelp" class="form-text text-muted">Va rugam agaugati durata testului in minute.</small>
+            </div>
+            
+             <div class="form-group">
+              <input class="basicInput" formControlName="materie" placeholder="Materia ">
+            </div>
+            <button class="basicInput" (click)="assignName()">Done</button>
+    </form>
   </div>
-</form>
-
 
 <div *ngFor="let question of questionsList">
   <app-question-card [question]="question" (myQuestion)="removeQuestion($event)"></app-question-card>
@@ -36,9 +37,9 @@
       <div class="col-sm">
         <button (click)="createQuestion('TF')" type="button" class="btn btn-outline-success">True/False</button>
       </div>
-      <div class="col-sm">
-        <button (click)="createQuestion('short')" type="button" class="btn btn-outline-info">Short answer</button>
-      </div>
+      <!--<div class="col-sm">-->
+      <!--  <button (click)="createQuestion('short')" type="button" class="btn btn-outline-info">Short answer</button>-->
+      <!--</div>-->
     </div>
   </div>
 

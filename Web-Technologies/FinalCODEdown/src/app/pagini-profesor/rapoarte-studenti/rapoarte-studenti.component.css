@@ -5,3 +5,8 @@
 i.material-icons{
     cursor: pointer;
 }
+
+a,
+a:hover{
+    color: #208AAE;
+}

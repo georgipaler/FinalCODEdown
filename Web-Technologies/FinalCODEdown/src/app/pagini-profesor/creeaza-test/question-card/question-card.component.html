@@ -1,18 +1,18 @@
 
   <div *ngIf="question.tip == 'multiple'" class="questionContainer">
+  <form [formGroup]="questionForm">
     <div class="container">
       <div class="row">
         <div class="col-md-auto">
           <i class="material-icons">create</i>
         </div>
         <div class="col">
-          <form>
-            <input class="questionInput" placeholder="Your question here..">
-          </form>
+           <div class="form-group">
+            <input class="questionInput" formControlName="questionTitle" placeholder="Your question here..">
+         </div>
         </div>
 
       </div>
-    </div>
 
     <br>
     <br>
@@ -28,14 +28,11 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="radio" formControlName="answerField" value="a" aria-label="Checkbox for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
+            <input type="text" formControlName="answerTextA"  class="form-control" aria-label="Text input with checkbox">
           </div>
-        </div>
-        <div class="col-md-auto">
-          <i class="material-icons">clear</i>
         </div>
       </div>
       <div class="row">
@@ -46,14 +43,11 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="radio" formControlName="answerField"  value="b" aria-label="Checkbox for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
+            <input type="text" formControlName="answerTextB"  class="form-control" aria-label="Text input with checkbox">
           </div>
-        </div>
-        <div class="col-md-auto">
-          <i class="material-icons">clear</i>
         </div>
       </div>
       <div class="row">
@@ -64,20 +58,33 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="radio" formControlName="answerField"  value="c" aria-label="Checkbox for following text input">
               </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
+            <input type="text"  formControlName="answerTextC" class="form-control" aria-label="Text input with checkbox">
           </div>
         </div>
+      </div>
+      
+       <div class="row">
         <div class="col-md-auto">
-          <i class="material-icons">clear</i>
+          D.
+        </div>
+        <div class="col">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" formControlName="answerField"  value="d" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text"  formControlName="answerTextD" class="form-control" aria-label="Text input with checkbox">
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-auto">
-          <button type="button" class="btn btn-success">Save</button>
+          <button type="submit"  (click)="saveQuestion()" class="btn btn-success">Save</button>
         </div>
         <div class="col">
           <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>
@@ -87,20 +94,22 @@
     </div>
 
 
-
+  </div>
+  
+  </form>
   </div>
 
   <div *ngIf="question.tip == 'TF'" class="questionContainer">
-
-    <div class="container">
+  <form [formGroup]="trueFalseForm">
+    <div class="container"  >
       <div class="row">
         <div class="col-md-auto">
           <i class="material-icons">create</i>
         </div>
         <div class="col">
-          <form>
-            <input class="questionInput" placeholder="Your question here..">
-          </form>
+           <div class="form-group">
+            <input class="questionInput" formControlName="questionTitle" placeholder="Your question here..">
+         </div>
         </div>
 
       </div>
@@ -112,19 +121,48 @@
     <div class="container">
 
 
-      <div class="row" style="padding-bottom: 1rem">
+       <div class="row">
         <div class="col-md-auto">
-          <button type="button" class="btn btn-light">True</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-light">False</button>
-        </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" formControlName="answerField"  value="true" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg" disabled>True</button>
 
+          </div>
+        </div>
+     
+        <div class="col">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" formControlName="answerField"  value="false" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg" disabled>False</button>
+          </div>
+        </div>
       </div>
+
+      <!--<div class="row" style="padding-bottom: 1rem">-->
+      <!--  <div class="col-md-auto">-->
+      <!--      <label class="class="btn btn-light" ">-->
+      <!--        <input type="radio"  formControlName="answerTrueFalse" value"true" name="options" autocomplete="off" >  True-->
+      <!--      </label>-->
+      <!--  </div>-->
+      <!--  <div class="col">-->
+      <!--    <label class="class="btn btn-light" ">-->
+      <!--        <input type="radio"  formControlName="answerTrueFalse" value"false" name="options" autocomplete="off" >  False-->
+      <!--      </label>-->
+      <!--  </div>-->
+
+      <!--</div>-->
 
       <div class="row">
         <div class="col-md-auto">
-          <button type="button" class="btn btn-success">Save</button>
+          <button type="submit"  (click)="saveTrueFalse()" class="btn btn-success">Save</button>
         </div>
         <div class="col">
           <button (click)="removeQuestion()"type="button" class="btn btn-outline-danger">Delete</button>
@@ -132,39 +170,40 @@
       </div>
 
     </div>
-  </div>
-
-  <div *ngIf="question.tip == 'short'" class="questionContainer">
-
-    <div class="container">
-      <div class="row" >
-        <div class="col-md-auto">
-          <i class="material-icons">create</i>
-        </div>
-        <div class="col">
-          <form>
-            <input class="questionInput" placeholder="Your question here..">
-          </form>
-        </div>
-
-      </div>
-    </div>
-
-    <br>
-    <br>
-    Add correct answer:
-
-    <form style="padding-bottom: 1rem"> 
-      <input class="questionInput" placeholder="Correct answer">
     </form>
-
-    <div class="row">
-      <div class="col-md-auto">
-        <button type="button" class="btn btn-success">Save</button>
-      </div>
-      <div class="col">
-        <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>
-      </div>
-    </div>
-
   </div>
+
+  <!--<div *ngIf="question.tip == 'short'" class="questionContainer">-->
+
+  <!--  <div class="container">-->
+  <!--    <div class="row" >-->
+  <!--      <div class="col-md-auto">-->
+  <!--        <i class="material-icons">create</i>-->
+  <!--      </div>-->
+  <!--      <div class="col">-->
+  <!--        <form>-->
+  <!--          <input class="questionInput" placeholder="Your question here..">-->
+  <!--        </form>-->
+  <!--      </div>-->
+
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--  <br>-->
+  <!--  <br>-->
+  <!--  Add correct answer:-->
+
+  <!--  <form style="padding-bottom: 1rem"> -->
+  <!--    <input class="questionInput" placeholder="Correct answer">-->
+  <!--  </form>-->
+
+  <!--  <div class="row">-->
+  <!--    <div class="col-md-auto">-->
+  <!--      <button type="button" class="btn btn-success">Save</button>-->
+  <!--    </div>-->
+  <!--    <div class="col">-->
+  <!--      <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--</div>-->

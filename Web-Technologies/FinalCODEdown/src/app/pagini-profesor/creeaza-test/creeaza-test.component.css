@@ -4,29 +4,32 @@
     padding-bottom: 3rem; 
 }
 
-input.radiusMargin {
-    width: 100%;
-
-    border:none;
-    border-bottom: solid 0.5px black;
+input.basicInput {
+    width: 60%;
 }
 
-.radiusMargin{
+.titleForm{
+  
+}
+.basicInput{
     
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     padding: .3rem .6rem;
+     color: #208AAE;
     background-color: transparent;
 }
 
-button.radiusMargin:hover{
-    color: #208AAE;
+button.basicInput:hover{
+    color: #FFCAD4;
     cursor: pointer;
+    border-color: #FFCAD4;
 }
 
 div.questionWrapper{
     padding-top: 5rem;
 }
-div.container{
+div.containerWrapper{
+    text-align: center;
     padding-top: 2rem;
 }
 
@@ -49,5 +52,10 @@ button.btn{
 button.btn.btn-light:hover{
     background-color: #007bff;
     color: white;
+}
+
+div.col-sm{
+    text-align: center;
+    margin-top: 2rem;
 }
 

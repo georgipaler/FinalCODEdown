@@ -8,9 +8,8 @@
  <thead>
   <tr>
     <th scope="col">ID</th>
-    <th scope="col">Denumire</th>
+    <th scope="col">Test</th>
     <th scope="col">Data</th>
-    <th scope="col">Cod</th>
     <th scope="col">Descarca</th>
  
   </tr>
@@ -18,9 +17,8 @@
 <tbody *ngFor="let raport of listaRapoarte; let i=index">
   <tr>
     <th scope="row">{{i+1}}</th>
-    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">{{raport.numeRaport}}</a></td>
+    <td><a class="nav-link" [routerLink]="['/homePage', { outlets: {sidebar: ['punctajeTeste'] } }]">text</a></td>
     <td>{{raport.dataRaport}}</td>
-    <td>{{raport.codRaport}}</td>
     <td> <i  (click)="downloadTest(test)" class="material-icons">save_alt</i></td>
 
     </tr>

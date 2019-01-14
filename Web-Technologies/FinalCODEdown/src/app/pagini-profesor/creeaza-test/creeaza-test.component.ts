@@ -21,7 +21,9 @@ export class CreeazaTestComponent implements OnInit {
 
   private initNameTestForm() {
     this.titleForm = this.fb.group({
-      testName: ["", [Validators.required]]
+      testName: ["", [Validators.required]],
+      time: ["", [Validators.required]],
+      materie: ["", [Validators.required]]
     });
 }
 

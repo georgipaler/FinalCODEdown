@@ -1,29 +1,22 @@
-
-
-
-<h1>Grupa X</h1>
-
-
 <table class="table">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>NUME</th>
-      <th>PRENUME</th>
-      <th class="note" *ngFor="let data of dateTest"> {{data}}</th>
+      <th>Nr crt</th>
+      <th>Materia</th>
+      <th>Test</th>
+      <th>Data</th>
+      <th>Punctaj</th>
 
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let stud of listaStudenti; let i=index">
+    <tr *ngFor="let raport of listaRaport; let i=index">
       <th>{{i+1}}</th>
-      <td>{{stud.nume}}</td>
-      <td>{{stud.prenume}}</td>
-      <td [ngClass]="{'verde': culoareNota(nota), 'rosu': !culoareNota(nota)} " class="note" *ngFor="let nota of stud.note">
-        {{nota}}
-        </td>
-  
+      <td>{{getTest(raport).materie}}</td>
+      <td>{{getTest(raport).denumire}}</td>
+      <td>{{raport.dataRaport}}</td>
+      <td>{{raport.punctaj}}</td>
     </tr>
   <tbody>
 </table>
