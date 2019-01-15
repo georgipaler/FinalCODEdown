@@ -19,17 +19,6 @@ export interface ITest {
 
 }
 
-export interface IUser{
-    id: number,
-    nume: string,
-    username: string,
-    password: string,
-    profil: string,
-    materie: string,
-    grupa: number,
-    an:number,
-    specializare: string
-}
 
 export interface IIntrebare {
     id: number;
@@ -147,7 +136,8 @@ export const LISTARASPUNSURI = [
     },
 ]
 
-export const TESTE = [
+export const TESTE: Array<ITest> = [
+
     {
         id: 1,
         denumire: "Testul 1",

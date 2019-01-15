@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { LoginHelperService } from 'src/services/login/login-helper.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { IUser } from '../models';
-
 
 @Component({
   selector: 'app-login',
@@ -14,19 +11,13 @@ import { IUser } from '../models';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  users: Array<IUser>;
+
   
   constructor(private loginHelper: LoginHelperService,
     private fb: FormBuilder,
-    private http: HttpClient,
     private router: Router) { }
 
   ngOnInit() {
-    
-     this.users = this.http
-            .get<IUser[]>("https://final-codedown-georgipaler.c9users.io/get/users")
-    
-    console.log("users", this.users)
     this.initLoginForm();
     console.log("is teacher", this.loginHelper.isTeacher)
   }
