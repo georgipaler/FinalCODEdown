@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm"  class="loginWrapper">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@stud.ase.ro">
+       
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input class="form-control" type="password" formControlName="password" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div *ngIf="parolaIncorecta">
+        <small id="incorrectPassword" class="form-text text-muted">Ati introdus incorect username-ul sau parola.</small>
+      </div>
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+
+  </form>
