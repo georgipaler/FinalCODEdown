@@ -33,11 +33,10 @@ export class LoginComponent implements OnInit {
             .get<IUser[]>("https://final-codedown-georgipaler.c9users.io/get/users").subscribe(users => {
               console.log("users", users);
               this.users = users;
-            })
+            });
     
-    console.log("users", this.users)
+    console.log("users", this.users);
     this.initLoginForm();
-    console.log("is teacher", this.loginHelper.isTeacher)
   }
 
 
@@ -73,12 +72,14 @@ onSubmit(){
     if(userFiltered[0].profil == "stud"){
       this.loginHelper.user = userFiltered[0];
       this.loginHelper.isLogin = true;
+      this.loginHelper.profil = "stud";
       this.router.navigate(['/studentPage', {outlets: {sidebar: ['startTest']}}]);
     }
     else{
       if(userFiltered[0].profil == "prof"){
         this.loginHelper.user = userFiltered[0];
         this.loginHelper.isLogin = true;
+        this.loginHelper.profil = "prof";
         this.router.navigate(['/homePage', {outlets: {sidebar: ['testeProf']}}]);
       }
     }

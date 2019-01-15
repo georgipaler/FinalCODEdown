@@ -1,7 +1,7 @@
 <div class="grid">
 
   <div>
-    <p> Test: {{ this.infoTest.denumire}}</p>
+    <p> Test: {{ this.infoTest.numeTest}}</p>
 
     <span> Time elapsed: {{utilService.displayTimeElapsed()}}</span>
 
@@ -9,17 +9,25 @@
 
 
   <div id="quiz">
-    <h2><span>{{this.indexIntrebare}}.</span> {{intrebareCurenta.titlu}}</h2>
+    <h2><span>{{this.indexIntrebare}}.</span> {{intrebareCurenta?.enunt}}</h2>
     <hr style="margin-top: 20px">
 
-    <div class="btn-group btn-group-toggle" data-toggle="buttons"  >
-       <div *ngFor="let raspuns of getAnswers(intrebareCurenta)">
-          <label class="btn btn-secondary " (click)="answer(raspuns)" >
-              <input type="radio" name="options" autocomplete="off" > {{raspuns.enunt}}
-            </label>
-       </div>
-    
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let raspuns of getAnswers(intrebareCurenta)">
+            <div class="col-sm">
+              <label class="btn btn-secondary" (click)="answer(raspuns)">
+                <input type="radio" name="options" autocomplete="off"> {{raspuns?.enunt}}
+              </label>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+    </div>
 
     <hr style="margin-top: 2rem">
     <div class="nextWrapper">
@@ -28,10 +36,11 @@
 
     <hr style="margin-top: 1rem">
     <div>
-      <p id="progress">Question {{this.indexIntrebare}} of {{this.nrIntrebari}}.</p>
+      <p id="progress">Question {{this?.indexIntrebare}} of {{this.nrIntrebari}}.</p>
       <div class="progress">
-        <div class="progress-bar" role="progressbar"  [style.width.%]="((this.indexIntrebare ) * 100 ) / this.nrIntrebari" aria-valuenow="(this.indexIntrebare +1) * 10" aria-valuemin="0"
-          aria-valuemax="100"> {{progressBar()}} %  </div>
+        <div class="progress-bar" role="progressbar" [style.width.%]="((this.indexIntrebare ) * 100 ) / this.nrIntrebari"
+          aria-valuenow="(this.indexIntrebare +1) * 10" aria-valuemin="0" aria-valuemax="100"> {{progressBar()}} %
+        </div>
       </div>
     </div>
   </div>

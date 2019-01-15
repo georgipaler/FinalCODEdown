@@ -64,3 +64,6 @@ p#progress {
     margin: 0 2.5rem;
 }
 
+.row{
+   justify-content: center;
+}

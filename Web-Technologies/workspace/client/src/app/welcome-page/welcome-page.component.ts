@@ -16,8 +16,8 @@ export class WelcomePageComponent implements OnInit {
   }
 
   checkRole(role:string){
-    this.loginHelper.isTeacher= role !== 'student';
-    console.log(this.loginHelper.isTeacher)
+    this.loginHelper.profil = role == 'student' ? "stud" : "prof";
+    console.log(this.loginHelper.profil)
 
     this.router.navigate(["/login"]);
 

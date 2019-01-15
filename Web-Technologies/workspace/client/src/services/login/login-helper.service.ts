@@ -6,7 +6,7 @@ import { IUser } from 'src/app/models';
 })
 export class LoginHelperService {
 
-  isTeacher: boolean;
+  profil: string;
   isLogin: boolean;
 
   user: IUser;

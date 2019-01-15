@@ -9,14 +9,13 @@ export interface IStudent {
 
 
 export interface ITest {
-    id: number;
-    denumire: string;
-    data?: string;
-    timp: number;
-    codTest: string;
-    activ?: boolean;
-    materie: string;
-
+    id: number,
+    numeTest: string,
+    timp: number,
+    materie: string,
+    codTest: string,
+    activ: boolean,
+    userId: number
 }
 
 export interface IUser{
@@ -33,9 +32,9 @@ export interface IUser{
 
 export interface IIntrebare {
     id: number;
+    enunt: string;
+    tipIntrebare: string;
     idTest: number,
-    titlu: string;
-    tip: string;
 }
 
 export interface IRaport {
@@ -48,10 +47,10 @@ export interface IRaport {
 }
 
 export interface IRaspuns {
-        idRaspuns: number;
+        id: number;
         idIntrebare: number;
         enunt: string;
-        raspunsCorect: boolean
+        isCorect: boolean
 }
 
 export const LISTAINTREBARI = [

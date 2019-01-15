@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginHelperService } from 'src/services/login/login-helper.service';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { IUser } from '../models';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +12,22 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  user : any = {
-    nume: "Madalina",
-    prenume: "Pana",
-    id: "panamadalina16@stud.ase.ro"
-  }
+  //subscriptions
+  userSubscription: Subscription;
+  isTescher: boolean;
+  user: IUser;
   constructor(public loginHelper: LoginHelperService,
-    private router: Router) { }
+    private router: Router,
+    private http: HttpClient) { }
 
   ngOnInit() {
+
+    this.userSubscription =  this.http
+            .get<IUser[]>("https://final-codedown-georgipaler.c9users.io/get/users").subscribe(users => {
+              console.log("users", users);
+
+              this.user = users.filter(user => user.profil == this.loginHelper.profil)[0];
+            });
   }
 
   logout(){
