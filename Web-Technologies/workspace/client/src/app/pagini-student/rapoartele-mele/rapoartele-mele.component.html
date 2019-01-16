@@ -13,10 +13,10 @@
   <tbody>
     <tr *ngFor="let raport of listaRaport; let i=index">
       <th>{{i+1}}</th>
-      <td>{{getTest(raport).materie}}</td>
-      <td>{{getTest(raport).numeTest}}</td>
-      <td>{{raport.dataRaport}}</td>
-      <td [ngClass]="{'verde': culoareNota(raport.punctaj), 'rosu': !culoareNota(raport.punctaj)} ">{{raport.punctaj}} %</td>
+      <td>{{getTest(raport)?.materie}}</td>
+      <td>{{getTest(raport)?.numeTest}}</td>
+      <td>{{raport?.dataRaport}}</td>
+      <td [ngClass]="{'verde': culoareNota(raport.punctaj), 'rosu': !culoareNota(raport.punctaj)} ">{{raport?.punctaj}} %</td>
     </tr>
   <tbody>
 </table>

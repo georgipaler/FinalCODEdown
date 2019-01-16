@@ -84,15 +84,7 @@ export class QuizzComponent implements OnInit, OnDestroy {
     else {
       this.utilService.scor = this.scor;
       this.utilService.nrIntrebari = this.nrIntrebari;
-      let percentage = Math.floor((this.scor / this.nrIntrebari) * 100);
-      let raport = {
-        "id": this.nrIntrebari,
-        "idTest": this.infoTest.id,
-        "dataRaport": "17.01.2019",
-        "punctaj": percentage,
-      }
-
-      this.http.post<IRaport>("https://final-codedown-georgipaler.c9users.io/post/rapoarte", raport);
+    
       this.router.navigate(['/studentPage', { outlets: { sidebar: ['finishQuiz'] } }]);
     }
 
@@ -112,6 +104,7 @@ export class QuizzComponent implements OnInit, OnDestroy {
   progressBar() {
     return Math.floor(((this.indexIntrebare) * 100) / this.nrIntrebari);
   }
+
 
   ngOnDestroy() {
     this.utilService.pauseTimer();

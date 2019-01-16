@@ -4,3 +4,7 @@ td.verde{
 td.rosu{
     background-color: red;
 }
+
+td, th{
+    text-align: center;
+}
