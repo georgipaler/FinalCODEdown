@@ -3,20 +3,24 @@
 </div>
 
  <div class="containerWrapper">
-    <form class="titleForm" [formGroup]="titleForm">
+    <form class="titleForm" (ngSubmit)="assignName()" [formGroup]="titleForm">
             <div class="form-group">
               <input class="basicInput" formControlName="testName" placeholder="Titlul testului">
             </div>
             
              <div class="form-group">
               <input class="basicInput" type="number"  formControlName="time" placeholder="Timpul alocat testului">
-               <small id="emailHelp" class="form-text text-muted">Va rugam agaugati durata testului in minute.</small>
+               <small id="emailHelp" class="form-text text-muted">Va rugam agaugati timpul alocat testului in minute.</small>
             </div>
             
+            <div class="form-group">
+              <input class="basicInput" formControlName="codTest" placeholder="Codul de acces ">
+            </div>
+
              <div class="form-group">
               <input class="basicInput" formControlName="materie" placeholder="Materia ">
             </div>
-            <button class="basicInput" (click)="assignName()">Done</button>
+            <button class="basicInput" [disabled]="!titleForm.valid">Done</button>
     </form>
   </div>
 
