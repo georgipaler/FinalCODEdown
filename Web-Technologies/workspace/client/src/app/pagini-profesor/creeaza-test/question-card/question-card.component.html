@@ -1,6 +1,6 @@
 
-  <div *ngIf="question.tip == 'multiple'" class="questionContainer">
-  <form [formGroup]="questionForm">
+  <div *ngIf="question.tipIntrebare == 'multiple'" class="questionContainer">
+  <form (ngSubmit)="saveQuestion()" [formGroup]="questionForm">
     <div class="container">
       <div class="row">
         <div class="col-md-auto">
@@ -11,12 +11,19 @@
             <input class="questionInput" formControlName="questionTitle" placeholder="Your question here..">
          </div>
         </div>
+        <div class="col-md-auto">
+          <button type="submit"  class="saveQuestion" [disabled]="!questionForm.valid">Save<i class="material-icons  checkIcon">done</i></button>
+        </div>
 
       </div>
-
+    </div>
+    </form>
     <br>
     <br>
+    
     Answer choice:
+
+    <form  (ngSubmit)="saveAnswers()" [formGroup]="answerForm" > 
     <div class="container">
 
 
@@ -34,6 +41,9 @@
             <input type="text" formControlName="answerTextA"  class="form-control" aria-label="Text input with checkbox">
           </div>
         </div>
+        <!-- <div class="col-md-auto">
+          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+        </div> -->
       </div>
       <div class="row">
         <div class="col-md-auto">
@@ -49,6 +59,9 @@
             <input type="text" formControlName="answerTextB"  class="form-control" aria-label="Text input with checkbox">
           </div>
         </div>
+        <!-- <div class="col-md-auto">
+          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+        </div> -->
       </div>
       <div class="row">
         <div class="col-md-auto">
@@ -64,6 +77,9 @@
             <input type="text"  formControlName="answerTextC" class="form-control" aria-label="Text input with checkbox">
           </div>
         </div>
+        <!-- <div class="col-md-auto">
+          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+        </div> -->
       </div>
       
        <div class="row">
@@ -80,43 +96,47 @@
             <input type="text"  formControlName="answerTextD" class="form-control" aria-label="Text input with checkbox">
           </div>
         </div>
+        <!-- <div class="col-md-auto">
+          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+        </div> -->
       </div>
 
       <div class="row">
-        <div class="col-md-auto">
-          <button type="submit"  (click)="saveQuestion()" class="btn btn-success">Save</button>
-        </div>
+          <div class="col-md-auto">
+              <button type="submit"  class="btn btn-outline-success" [disabled]="!answerForm.valid">Add</button>
+            </div> 
         <div class="col">
           <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>
         </div>
       </div>
 
     </div>
-
-
-  </div>
-  
   </form>
   </div>
+  
 
   <div *ngIf="question.tip == 'TF'" class="questionContainer">
-  <form [formGroup]="trueFalseForm">
-    <div class="container"  >
-      <div class="row">
-        <div class="col-md-auto">
-          <i class="material-icons">create</i>
+    <form (ngSubmit)="saveQuestion()" [formGroup]="questionForm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-auto">
+            <i class="material-icons">create</i>
+          </div>
+          <div class="col">
+             <div class="form-group">
+              <input class="questionInput" formControlName="questionTitle" placeholder="Your question here..">
+           </div>
+          </div>
+          <div class="col-md-auto">
+            <button type="submit"  class="saveQuestion" [disabled]="!questionForm.valid">Save<i class="material-icons  checkIcon">done</i></button>
+          </div>
+  
         </div>
-        <div class="col">
-           <div class="form-group">
-            <input class="questionInput" formControlName="questionTitle" placeholder="Your question here..">
-         </div>
-        </div>
-
       </div>
-    </div>
+      </form>
+    <br>
+    <br>
 
-    <br>
-    <br>
     Answer choice:
     <div class="container">
 
@@ -170,7 +190,6 @@
       </div>
 
     </div>
-    </form>
   </div>
 
   <!--<div *ngIf="question.tip == 'short'" class="questionContainer">-->

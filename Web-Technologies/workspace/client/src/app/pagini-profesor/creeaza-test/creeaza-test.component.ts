@@ -14,9 +14,11 @@ export class CreeazaTestComponent implements OnInit {
 
   public titleComponent= "Creeaza test nou";
   public questionsList: IIntrebare[] = [];
+  public nrIntrebari: number;
   public listaTeste: Array<ITest>;
 
   testeSubscription: Subscription;
+  intrebariSubscription: Subscription;
   public testListSubject:BehaviorSubject<any> = new BehaviorSubject([]) ;
 
   titleForm: FormGroup;
@@ -28,6 +30,12 @@ export class CreeazaTestComponent implements OnInit {
     .get<ITest[]>("https://final-codedown-georgipaler.c9users.io/get/teste").subscribe(teste => {
       console.log("users", teste);
       this.listaTeste = teste;
+    });
+
+    this.intrebariSubscription = this.http
+    .get<IIntrebare[]>("https://final-codedown-georgipaler.c9users.io/get/intrebari").subscribe(intrebari => {
+      console.log("intrebari", intrebari);
+      this.nrIntrebari = intrebari.length;
     })
 
     this.initNameTestForm();
@@ -50,14 +58,18 @@ assignName(){
 
 createQuestion(type: string){
   let q = {
-    id: 20+this.questionsList.length,
+    id: this.nrIntrebari,
     idTest: this.listaTeste.length,
     enunt : "",
     tipIntrebare: type
   }
+
+  console.log("q", q, this.questionsList)
   this.questionsList.push(q);
 }
 
+
+//delete local question
 removeQuestion(intrebare: IIntrebare){
   const index = this.questionsList.findIndex(q => q.id === intrebare.id);
   this.questionsList.splice(index, 1);
@@ -91,6 +103,7 @@ removeQuestion(intrebare: IIntrebare){
 
 ngOnDestry(){
   this.testeSubscription.unsubscribe();
+  this,this.intrebariSubscription.unsubscribe();
 }
 
 }

@@ -23,3 +23,21 @@ i.material-icons{
     border-color: #e9ecef;
     
 }
+
+i.material-icons.checkIcon{
+    color: green;
+}   
+
+button.saveQuestion{
+    background: transparent;
+    border: none;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+button.addAnswer{
+    color: green;
+    background: transparent;
+    cursor: pointer;
+}
