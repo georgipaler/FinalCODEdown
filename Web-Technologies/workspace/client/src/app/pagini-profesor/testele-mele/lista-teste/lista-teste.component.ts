@@ -33,6 +33,8 @@ export class ListaTesteComponent implements OnInit {
   startTest(test: ITest){
      console.log("start test", test )
      test.activ  = !test.activ;
+
+     
      
 }
 

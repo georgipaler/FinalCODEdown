@@ -4,6 +4,7 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
 import { IIntrebare, IRaport, IRaspuns } from 'src/app/models';
+import { resolve } from 'url';
 
 @Component({
   selector: 'app-question-card',
@@ -19,15 +20,15 @@ export class QuestionCardComponent implements OnInit {
   questionForm: FormGroup;
   trueFalseForm: FormGroup;
   answerForm: FormGroup;
-
+  showAns: boolean = false;
 
   listaIntrebari: Array<any> = [];
   intrebariSubscription: Subscription;
   raspunsuriSubscription: Subscription;
-  public questionListSubject:BehaviorSubject<any> = new BehaviorSubject([]) ;
+  public questionListSubject: BehaviorSubject<any> = new BehaviorSubject([]);
 
   listaRaspunsuri: Array<any> = [];
-  public answerListSubject:BehaviorSubject<any> = new BehaviorSubject([]) ;
+  public answerListSubject: BehaviorSubject<any> = new BehaviorSubject([]);
 
   constructor(private fb: FormBuilder,
     private http: HttpClient) { }
@@ -35,16 +36,16 @@ export class QuestionCardComponent implements OnInit {
   ngOnInit() {
 
     this.intrebariSubscription = this.http
-    .get<IIntrebare[]>("https://final-codedown-georgipaler.c9users.io/get/intrebari").subscribe(intrebari => {
-      console.log("intrebari card", intrebari);
-      this.listaIntrebari = intrebari;
-    });
-    
+      .get<IIntrebare[]>("https://final-codedown-georgipaler.c9users.io/get/intrebari").subscribe(intrebari => {
+        console.log("intrebari card", intrebari);
+        this.listaIntrebari = intrebari;
+      });
+
     this.raspunsuriSubscription = this.http
-    .get<IRaspuns[]>("https://final-codedown-georgipaler.c9users.io/get/raspunsuri").subscribe(raspunsuri => {
-      console.log("raspunsuri card", raspunsuri);
-      this.listaRaspunsuri = raspunsuri;
-    });
+      .get<IRaspuns[]>("https://final-codedown-georgipaler.c9users.io/get/raspunsuri").subscribe(raspunsuri => {
+        console.log("raspunsuri card", raspunsuri);
+        this.listaRaspunsuri = raspunsuri;
+      });
 
 
     console.log("question card", this.question);
@@ -58,51 +59,102 @@ export class QuestionCardComponent implements OnInit {
   }
 
   //save question and post
-  saveQuestion(){
+  saveQuestion() {
     this.addQuestion(this.newQuestionValue());
+    this.showAns = true;
     console.log("save question", this.newQuestionValue())
   }
 
-  saveAnswers(){
-     this.createAnswer("a", this.answerForm.value.answerTextA);
-    //  this.createAnswer("b", this.answerForm.value.answerTextB);
-    //  this.createAnswer("c", this.answerForm.value.answerTextC);
-    //  this.createAnswer("d", this.answerForm.value.answerTextD);
+  saveAnswers() {
+    this.showAns = false;
+    Promise.all([
+      this.createAnswer("a", this.answerForm.value.answerTextA),
+      this.createAnswer("b", this.answerForm.value.answerTextB),
+      this.createAnswer("c", this.answerForm.value.answerTextC),
+      this.createAnswer("d", this.answerForm.value.answerTextD),
+    ]).then((result) => {
+      console.log("all done", result);
+    });
   }
 
   saveTrueFalse() {
-    console.log("save question", this.trueFalseForm.value)
+    this.showAns = false;
+
+    if (this.trueFalseForm.value.answerField == "true") {
+      Promise.all([
+        this.createTrueFalse("True", true),
+        this.createTrueFalse("False", false),
+      ]).then((result) => {
+        console.log("all done", result);
+      });
+    }
+
+    else {
+      Promise.all([
+        this.createTrueFalse("True", false),
+        this.createTrueFalse("False", true),
+      ]).then((result) => {
+        console.log("all done", result);
+      });
+    }
+
+    console.log("save question");
   }
 
- //initializeaza form de intrebare ,ultiple
+  //initializeaza form de intrebare ,ultiple
   private initNameQuestionMultipleForm() {
     this.questionForm = this.fb.group({
       questionTitle: ["", [Validators.required]]
     });
   }
 
-   //initializeaza form de intrebare ,ultiple
-   private initAnswerForm() {
+  //initializeaza form de intrebare ,ultiple
+  private initAnswerForm() {
     this.answerForm = this.fb.group({
       answerField: new FormControl('a'),
       answerTextA: ["", [Validators.required]],
       answerTextB: ["", [Validators.required]],
-      answerTextC: ["", ],
-      answerTextD: ["", ]
+      answerTextC: ["",],
+      answerTextD: ["",]
     });
   }
 
   //initializeaza form de intrebare True/False
   private initNameQuestionTrueFalseForm() {
     this.trueFalseForm = this.fb.group({
-      questionTitle: ["", [Validators.required]],
       answerField: new FormControl('true'),
     });
   }
 
+  createTrueFalse(enunt: string, corect: boolean): Promise<any> {
+    return new Promise((resolve, reject) => {
+
+      let answer = {
+        idIntrebare: this.question.id,
+        enunt: enunt,
+        isCorect: corect
+      }
+
+      this.addAnswer(answer).subscribe(data => {
+        this.listaRaspunsuri.push(_.cloneDeep(answer));
+        this.answerListSubject.next(this.listaRaspunsuri);
+        resolve("done");
+        console.log("post", this.listaRaspunsuri)
+      }, err => {
+        resolve("fail obs");
+      });
+    })
+  }
+
   //salveaza raspunsurile si post in baza de date
-  createAnswer(posibleCorect: string, formAnswer: string) {
-    if (formAnswer) {
+  createAnswer(posibleCorect: string, formAnswer: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (!formAnswer) {
+        resolve("no form");
+        console.log("nu exista raspunsul", formAnswer);
+        return;
+
+      }
 
       let answer = {
         idIntrebare: this.question.id,
@@ -114,19 +166,21 @@ export class QuestionCardComponent implements OnInit {
         answer["isCorect"] = true;
       }
       console.log("save answer", answer);
-      
-      this.addAnswer(answer);
-      
-    }
-    else{
-      console.log("nu exista raspunsul", formAnswer);
-    }
-    
+
+      this.addAnswer(answer).subscribe(data => {
+        this.listaRaspunsuri.push(_.cloneDeep(answer));
+        this.answerListSubject.next(this.listaRaspunsuri);
+        resolve("done");
+        console.log("post", this.listaRaspunsuri)
+      }, err => {
+        resolve("fail obs");
+      });
+    })
   }
 
 
-   //post question http req 
-   addNewQuestionObs(question: any): Observable<any>{
+  //post question http req 
+  addNewQuestionObs(question: any): Observable<any> {
     return this.http.post("https://final-codedown-georgipaler.c9users.io/post/intrebari", question);
   }
 
@@ -141,7 +195,7 @@ export class QuestionCardComponent implements OnInit {
     });
   }
 
-  newQuestionValue() : any{
+  newQuestionValue(): any {
     let question = {
       enunt: this.questionForm.value.questionTitle,
       tipIntrebare: this.question.tipIntrebare,
@@ -153,18 +207,13 @@ export class QuestionCardComponent implements OnInit {
   }
 
 
-    //post answer http req 
-    addNewAnswerObs(answer: any): Observable<any>{
-      return this.http.post("https://final-codedown-georgipaler.c9users.io/post/raspunsuri", answer);
-    }
-  
-    addAnswer(answer: any): void {
-      this.addNewAnswerObs(answer).subscribe(data => {
-        this.listaRaspunsuri.push(_.cloneDeep(answer));
-        this.answerListSubject.next(this.listaRaspunsuri);
-  
-        console.log("post", this.listaRaspunsuri)
-      });
-    }
+  //post answer http req 
+  addNewAnswerObs(answer: any): Observable<any> {
+    return this.http.post("https://final-codedown-georgipaler.c9users.io/post/raspunsuri", answer);
+  }
+
+  addAnswer(answer: any): Observable<any> {
+    return this.addNewAnswerObs(answer);
+  }
 
 }

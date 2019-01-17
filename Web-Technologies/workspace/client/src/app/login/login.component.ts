@@ -73,6 +73,7 @@ onSubmit(){
       this.loginHelper.user = userFiltered[0];
       this.loginHelper.isLogin = true;
       this.loginHelper.profil = "stud";
+      
       this.router.navigate(['/studentPage', {outlets: {sidebar: ['startTest']}}]);
     }
     else{

@@ -1,5 +1,6 @@
 
   <div *ngIf="question.tipIntrebare == 'multiple'" class="questionContainer">
+      <br>
   <form (ngSubmit)="saveQuestion()" [formGroup]="questionForm">
     <div class="container">
       <div class="row">
@@ -19,103 +20,109 @@
     </div>
     </form>
     <br>
-    <br>
+   
     
-    Answer choice:
+    <div *ngIf="showAns">
+        <br>
+        Answer choice:
 
-    <form  (ngSubmit)="saveAnswers()" [formGroup]="answerForm" > 
-    <div class="container">
-
-
-      <div class="row">
-        <div class="col-md-auto">
-          A.
-        </div>
-        <div class="col">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField" value="a" aria-label="Checkbox for following text input">
+        <form  (ngSubmit)="saveAnswers()" [formGroup]="answerForm" > 
+        <div class="container">
+    
+    
+          <div class="row">
+            <div class="col-md-auto">
+              A.
+            </div>
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField" value="a" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input type="text" formControlName="answerTextA"  class="form-control" aria-label="Text input with checkbox">
               </div>
             </div>
-            <input type="text" formControlName="answerTextA"  class="form-control" aria-label="Text input with checkbox">
+            <!-- <div class="col-md-auto">
+              <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+            </div> -->
           </div>
-        </div>
-        <!-- <div class="col-md-auto">
-          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-md-auto">
-          B.
-        </div>
-        <div class="col">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField"  value="b" aria-label="Checkbox for following text input">
+          <div class="row">
+            <div class="col-md-auto">
+              B.
+            </div>
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField"  value="b" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input type="text" formControlName="answerTextB"  class="form-control" aria-label="Text input with checkbox">
               </div>
             </div>
-            <input type="text" formControlName="answerTextB"  class="form-control" aria-label="Text input with checkbox">
+            <!-- <div class="col-md-auto">
+              <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+            </div> -->
           </div>
-        </div>
-        <!-- <div class="col-md-auto">
-          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-md-auto">
-          C.
-        </div>
-        <div class="col">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField"  value="c" aria-label="Checkbox for following text input">
+          <div class="row">
+            <div class="col-md-auto">
+              C.
+            </div>
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField"  value="c" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input type="text"  formControlName="answerTextC" class="form-control" aria-label="Text input with checkbox">
               </div>
             </div>
-            <input type="text"  formControlName="answerTextC" class="form-control" aria-label="Text input with checkbox">
+            <!-- <div class="col-md-auto">
+              <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+            </div> -->
           </div>
-        </div>
-        <!-- <div class="col-md-auto">
-          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
-        </div> -->
-      </div>
-      
-       <div class="row">
-        <div class="col-md-auto">
-          D.
-        </div>
-        <div class="col">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField"  value="d" aria-label="Checkbox for following text input">
+          
+           <div class="row">
+            <div class="col-md-auto">
+              D.
+            </div>
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField"  value="d" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input type="text"  formControlName="answerTextD" class="form-control" aria-label="Text input with checkbox">
               </div>
             </div>
-            <input type="text"  formControlName="answerTextD" class="form-control" aria-label="Text input with checkbox">
+            <!-- <div class="col-md-auto">
+              <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
+            </div> -->
           </div>
+    
+          <div class="row">
+              <div class="col-md-auto">
+                  <button type="submit"  class="btn btn-outline-success" [disabled]="!answerForm.valid">Add</button>
+                </div> 
+            <div class="col">
+              <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>
+            </div>
+          </div>
+    
         </div>
-        <!-- <div class="col-md-auto">
-          <button type="submit"  class="addAnswer" [disabled]="!questionForm.valid">Add</button>
-        </div> -->
-      </div>
-
-      <div class="row">
-          <div class="col-md-auto">
-              <button type="submit"  class="btn btn-outline-success" [disabled]="!answerForm.valid">Add</button>
-            </div> 
-        <div class="col">
-          <button (click)="removeQuestion()" type="button" class="btn btn-outline-danger">Delete</button>
-        </div>
-      </div>
+      </form>
 
     </div>
-  </form>
+    
   </div>
   
 
-  <div *ngIf="question.tip == 'TF'" class="questionContainer">
+  <div *ngIf="question.tipIntrebare == 'TF'" class="questionContainer">
+      <br>
     <form (ngSubmit)="saveQuestion()" [formGroup]="questionForm">
       <div class="container">
         <div class="row">
@@ -134,62 +141,56 @@
         </div>
       </div>
       </form>
+    
+
     <br>
-    <br>
+    <div *ngIf="showAns" >
+        <br>
 
-    Answer choice:
-    <div class="container">
-
-
-       <div class="row">
-        <div class="col-md-auto">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField"  value="true" aria-label="Checkbox for following text input">
+        Answer choice:
+        <form  (ngSubmit)="saveTrueFalse()" [formGroup]="trueFalseForm" > 
+        <div class="container">
+    
+    
+           <div class="row">
+            <div class="col-md-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField"  value="true" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg" disabled>True</button>
+    
               </div>
             </div>
-            <button type="button" class="btn btn-secondary btn-lg" disabled>True</button>
-
-          </div>
-        </div>
-     
-        <div class="col">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input type="radio" formControlName="answerField"  value="false" aria-label="Checkbox for following text input">
+         
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" formControlName="answerField"  value="false" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg" disabled>False</button>
               </div>
             </div>
-            <button type="button" class="btn btn-secondary btn-lg" disabled>False</button>
           </div>
+    
+          <div class="row">
+            <div class="col-md-auto">
+              <button type="submit"  class="btn btn-success">Save</button>
+            </div>
+            <div class="col">
+              <button (click)="removeQuestion()"type="button" class="btn btn-outline-danger">Delete</button>
+            </div>
+          </div>
+    
         </div>
-      </div>
-
-      <!--<div class="row" style="padding-bottom: 1rem">-->
-      <!--  <div class="col-md-auto">-->
-      <!--      <label class="class="btn btn-light" ">-->
-      <!--        <input type="radio"  formControlName="answerTrueFalse" value"true" name="options" autocomplete="off" >  True-->
-      <!--      </label>-->
-      <!--  </div>-->
-      <!--  <div class="col">-->
-      <!--    <label class="class="btn btn-light" ">-->
-      <!--        <input type="radio"  formControlName="answerTrueFalse" value"false" name="options" autocomplete="off" >  False-->
-      <!--      </label>-->
-      <!--  </div>-->
-
-      <!--</div>-->
-
-      <div class="row">
-        <div class="col-md-auto">
-          <button type="submit"  (click)="saveTrueFalse()" class="btn btn-success">Save</button>
-        </div>
-        <div class="col">
-          <button (click)="removeQuestion()"type="button" class="btn btn-outline-danger">Delete</button>
-        </div>
-      </div>
-
+        </form>
     </div>
+
+  
   </div>
 
   <!--<div *ngIf="question.tip == 'short'" class="questionContainer">-->
