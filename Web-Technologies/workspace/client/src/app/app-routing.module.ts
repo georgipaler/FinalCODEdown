@@ -41,7 +41,7 @@ const routes: Routes = [
         outlet: "sidebar"
       },
       {
-        path: 'listaTeste',
+        path: 'listaTeste/:materie',
         component: ListaTesteComponent,
         outlet: "sidebar"
       },

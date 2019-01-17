@@ -25,7 +25,8 @@ import { QuizzComponent } from './pagini-student/quizz/quizz.component';
 import { FinishQuizComponent } from './pagini-student/finish-quiz/finish-quiz.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { StorageServiceModule} from 'angular-webstorage-service';
+ 
 
 
 
@@ -60,7 +61,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]

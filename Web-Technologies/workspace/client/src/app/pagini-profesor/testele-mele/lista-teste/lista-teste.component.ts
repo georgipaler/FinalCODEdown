@@ -3,6 +3,7 @@ import { ITest, TESTE } from 'src/app/models';
 import { StartTestComponent } from 'src/app/pagini-student/start-test/start-test.component';
 import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-lista-teste',
   templateUrl: './lista-teste.component.html',
@@ -11,16 +12,31 @@ import { HttpClient } from '@angular/common/http';
 export class ListaTesteComponent implements OnInit {
 
   testeSubscription: Subscription;
-  constructor(private http: HttpClient) { }
-
+  uniqueObjects: string[] = [];
+  objectsList: string[] = [];
   public listaTeste: Array<ITest>;
+  sub: Subscription;
+  materiaCurenta : string;
+
+  constructor(private http: HttpClient,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    //get route param
+
+    
+    this.sub = this.route.params.subscribe(params => {
+      this.materiaCurenta = params['materie']; // (+) converts string 'id' to a number
+      console.log("materia curenta", this.materiaCurenta)
+      // In a real app: dispatch action to load the details here.
+   });
 
     this.testeSubscription = this.http
     .get<ITest[]>("https://final-codedown-georgipaler.c9users.io/get/teste").subscribe(teste => {
       console.log("users", teste);
-      this.listaTeste = teste;
+      this.listaTeste = teste.filter(item => item.materie == this.materiaCurenta);
+
     });
   }
   
@@ -33,10 +49,8 @@ export class ListaTesteComponent implements OnInit {
   startTest(test: ITest){
      console.log("start test", test )
      test.activ  = !test.activ;
-
-     
-     
 }
+
 
 
 downloadTest(test: ITest){
