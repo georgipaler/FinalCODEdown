@@ -51,7 +51,7 @@ const routes: Routes = [
         outlet: "sidebar"
       },
       {
-        path: 'punctajeTeste',
+        path: 'punctajeTeste/:id',
         component: PunctajeTesteComponent,
         outlet: "sidebar"
       },

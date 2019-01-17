@@ -8,19 +8,17 @@
     <tr>
       <th>ID</th>
       <th>NUME</th>
-      <th>PRENUME</th>
-      <th class="note" *ngFor="let data of dateTest"> {{data}}</th>
+      <th class="note" *ngFor="let data of listaRapoarte"> {{displayWithoutYear(data.dataRaport)}}</th>
 
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let stud of listaStudenti; let i=index">
+    <tr *ngFor="let stud of listaUsers; let i=index">
       <th>{{i+1}}</th>
       <td>{{stud.nume}}</td>
-      <td>{{stud.prenume}}</td>
-      <td [ngClass]="{'verde': culoareNota(nota), 'rosu': !culoareNota(nota)} " class="note" *ngFor="let nota of stud.note">
-        {{nota}}
+      <td [ngClass]="{'verde': culoareNota(nota.punctaj), 'rosu': !culoareNota(nota.punctaj)} " class="note" *ngFor="let nota of listaRapoarte">
+        {{nota.punctaj}}
         </td>
   
     </tr>

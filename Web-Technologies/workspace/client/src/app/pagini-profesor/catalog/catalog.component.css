@@ -12,16 +12,20 @@ h1{
   color:#208AAE;
   margin-left: 60px;
 }
-
 .dropbtn {
-  background-color: #208AAE ;
+  background-color:#208AAE ;
   color: white;
-  padding:16px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 12px;
   color:white;
-  bottom: 15px; top:60px; left: 70%; height: 50px; width:240px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-width: 14rem;
+  min-height: 3rem;
+
 }
 .dropdown {
   position: relative;
@@ -35,9 +39,11 @@ h1{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: Bisque  ;
+  background-color: #F7F4F3  ;
+  color: #208AAE;
   min-width: 200px;
   box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 1rem;
   z-index: 1;
 
   margin-left:150px;
@@ -46,7 +52,7 @@ h1{
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: #208AAE;;
   padding: 12px 40px;
   text-decoration: none;
   display: block;
@@ -54,7 +60,9 @@ h1{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #208AAE;
+  background-color: #FFCAD4;
+  border-radius: 1rem;
+  color: #208AAE;
 	}
 
 /* Show the dropdown menu on hover */
@@ -64,14 +72,24 @@ h1{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	background-color: #208AAE;
-	color:LightPink;
+	background-color: #FFCAD4;
+	color:#208AAE;
 }
 
 .coloane{
   display: inline-block;
   margin-left: 40%;
 }
-.titleWrapper{
-  margin-left: 47%;
+
+.centerContent{
+
+  width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    margin-top: -5rem;
 }

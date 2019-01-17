@@ -24,11 +24,9 @@ export class ListaTesteComponent implements OnInit {
   ngOnInit() {
 
     //get route param
-
-    
     this.sub = this.route.params.subscribe(params => {
       this.materiaCurenta = params['materie']; // (+) converts string 'id' to a number
-      console.log("materia curenta", this.materiaCurenta)
+      console.log("raport curent", this.materiaCurenta)
       // In a real app: dispatch action to load the details here.
    });
 
