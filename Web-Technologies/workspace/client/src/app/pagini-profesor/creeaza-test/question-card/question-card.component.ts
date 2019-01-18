@@ -130,7 +130,7 @@ export class QuestionCardComponent implements OnInit {
     return new Promise((resolve, reject) => {
 
       let answer = {
-        idIntrebare: this.question.id,
+        idIntrebare: this.question.id + 1,
         enunt: enunt,
         isCorect: corect
       }
@@ -157,7 +157,7 @@ export class QuestionCardComponent implements OnInit {
       }
 
       let answer = {
-        idIntrebare: this.question.id,
+        idIntrebare: this.question.id + 1,
         enunt: formAnswer,
         isCorect: false
       }

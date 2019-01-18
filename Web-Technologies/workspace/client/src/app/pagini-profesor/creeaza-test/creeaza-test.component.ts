@@ -65,6 +65,8 @@ createQuestion(type: string){
   }
 
   console.log("q", q, this.questionsList)
+
+  this.nrIntrebari ++;
   this.questionsList.push(q);
 }
 
@@ -95,7 +97,7 @@ removeQuestion(intrebare: IIntrebare){
       timp: this.titleForm.value.time,
       materie: this.titleForm.value.materie,
       codTest: this.titleForm.value.codTest,
-      activ: false,
+      activ: true,
       userId: 2
     }
     return test;
